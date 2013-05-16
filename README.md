@@ -2,7 +2,7 @@ ReLiveRadio-JsonP-about-Ajax
 ============================
 @Developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a> für 
 <a href="https://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">ReLive Radio</a> Json API über 
-Ajax, für die Implementierung des der neusten Sendungen im Chapters des Podlove Web Players.
+Ajax, für die Implementierung der neusten Sendungen, im Chapters des Podlove Web Players.
 
 
 Siehe auch das Testsystem unter:<br> http://cm.wikibyte.org/testcodes/
