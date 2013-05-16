@@ -5,12 +5,14 @@ ReLiveRadio-JsonP-about-Ajax
 Ajax, für die Implementierung der neusten Sendungen, im Chapters des Podlove Web Players.
 
 
-Siehe auch das Testsystem unter:<br> http://cm.wikibyte.org/testcodes/
+Siehe auch das Testsystem unter:<br> http://cm.wikibyte.org/testcodes/<br>
+
+Test Webplayer: http://cm.wikibyte.org/testbereich/test-relive-player/
 
 
 <b>Install:</b>
 
-<i>open the file:</i>
+<i>Öffne die Datei:</i>
 <code>.../testcodes/inc/inc.setup.php</code>
 
 <pre>
