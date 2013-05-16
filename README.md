@@ -1,33 +1,33 @@
 ReLiveRadio-JsonP-about-Ajax
 ============================
-
-Ajax Test für WebPlayer
-
-
-Siehe auch: http://cm.wikibyte.org/testcodes/
+@Developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a> für 
+<a href="https://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">ReLive Radio</a> Json API über 
+Ajax, für die Implementierungdes der neusten Sendungen im Chapters des Podlove Web Players.
 
 
-Install:
+Siehe auch das Testsystem unter:<br> http://cm.wikibyte.org/testcodes/
 
-open the file:
-.../testcodes/inc/inc.setup.php
+
+<b>Install:</b>
+
+<i>open the file:</i>
+<code>.../testcodes/inc/inc.setup.php</code>
 
 <pre>
-<?php
+&lt;?php
 /**
 *
 *  TESTSYSTEM für Relive ausgabe über Ajax & JsonP
-*
-*	@Developer: Michael McCouman jr.
-*	@Mail: Support@wikibyte.org
-* 	@Version: 0.1.a
-*
+*  -----------------------------------------------
+*  
+*  ....
+*  
 */
 
 
 //Install Url des Packetes
 global $url_plugin;
-$url_plugin = <span style="color:#f00;">"http://domain.tld/testcodes/"</span>; //<= Url eingeben
+$url_plugin = <span style="color:#f00;">"http://domain.tld/testcodes/"</span>; //&lt;= Url eingeben
 
 //Json URL von Relive Radio
 $url_rrjson = "http://programm.reliveradio.de/api/today-info";
