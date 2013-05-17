@@ -12,7 +12,7 @@
 
 //Install Url des Packetes
 global $url_plugin;
-$url_plugin = "http://cm.wikibyte.org/testcodes/";
+$url_plugin = "http://deinedomain.tld/testcodes/";
 
 //Json URL von Relive Radio
 $url_rrjson = "http://programm.reliveradio.de/api/today-info";
