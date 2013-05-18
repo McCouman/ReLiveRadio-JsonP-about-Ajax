@@ -30,23 +30,23 @@ Bitte gebe diesen Link in deinem Podlove Web Player unter <span style="color:#f0
 
 if($_GET['api']) {
 				
-		//URL zum String
-		$url=$_GET['api'];
-		$url=$url.'';
+		//get in var:
+		$url = $_GET['api'];
+		$url = $url; //no *.txt!
 				
-			//Abfrage:
-			$sql=$url;
-			$count=''. $sql .'';
-			$rows=$sql;
+		//Abfrage:
+		$count = $url; //test2
+			
+	
 
 		if($count == 'chapters') {
 				
 		
 #############################################################
-# API URL (index.php?url=<Name der URL>)
+# API URL (index.php?api=chapters)
 #
-			
-	#echo $rows;
+	//Test gets		
+	#echo $url;
 		
 	//ReRadio
 	$jsonfile = file_get_contents('http://programm.reliveradio.de/api/today-info');
