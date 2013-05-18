@@ -8,7 +8,7 @@ ReLiveRadio-JsonP-about-Ajax
 */</pre>
 
 <b>Testsysteme:</b><br>
-Siehe auch das Testsystem unter:<br> http://cm.wikibyte.org/testcodes/<br>
+Siehe auch die API auf dem Testsystem unter:<br> http://cm.wikibyte.org/testcodes/<br>
 
 Test WebPlayer: <br> http://cm.wikibyte.org/testbereich/test-relive-player/
 
