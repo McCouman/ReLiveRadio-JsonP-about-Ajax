@@ -22,7 +22,7 @@ Bitte gebe diesen Link in deinem Podlove Web Player unter <span style="color:#f0
 <br>
 <b>Beispielcode:</b>
 <div style="border-radius:2px; background:#eee; padding:10px; border: 1px solid #aaa;">
-[podloveaudio src="http://stream.reliveradio.de:8000/24.mp3" <span style="color:#f00;">chapters="http://cm.wikibyte.org/testcodes/cepter.txt"</span>]
+[podloveaudio src="http://stream.reliveradio.de:8000/24.mp3" <span style="color:#f00;">chapters="http://cm.wikibyte.org/testcodes/chapters.txt"</span>]
 </div>'; 
 
 ############# INPUT SESSION: #########################################################
