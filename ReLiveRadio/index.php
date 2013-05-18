@@ -29,22 +29,17 @@ Bitte gebe diesen Link in deinem Podlove Web Player unter <span style="color:#f0
 #
 
 if($_GET['api']) {
-				
-		//URL zum String
-		$url=$_GET['api'];
-		$url=$url.'';
-				
-			//Abfrage:
-			$sql=$url;
-			$count=''. $sql .'';
-			$rows=$sql;
-
-		if($count == 'chapters') {
+		
+	//get in var:
+	$url = $_GET['api'];
+		
+		//is $url = $url =>
+		if($url == 'chapters') {
 				
 		
-#############################################################
-# API URL (index.php?url=<Name der URL>)
-#
+	#############################################################
+	# API URL (index.php?url=<Name der URL>)
+	#
 			
 	#echo $rows;
 		
@@ -55,6 +50,7 @@ if($_GET['api']) {
 	$suche = json_decode($jsonfile,TRUE);
 	
 
+//--------------
 
 //0
 if (time() < strtotime(substr($suche[0]["ends"], 0, 19))) {	
@@ -178,29 +174,20 @@ if (time() < strtotime(substr($suche[23]["starts"], 0, 19))) {
 } #else { echo '23 - no'; }
 	
 		
+//--------------//		
 		
-		
-
-		
-		
-		
-		} else {
-			echo '<h1>Falsche API Anweiung!</h1>';
-			echo $info;
-		}
+	} else {
+		echo '<h1>Falsche API Anweiung!</h1>';
+		echo $info;
+	}
+	#
+	#
+	###################################################################
+					
 				
-				
-		# ERRORMELDUNG: 
-		} else { 
-			echo '<h1>ReLive Chapter API</h1>';
-			echo $info. '<br>@Developer: Michael Kaufmann 2013';
-		} 
-
-		#
-		#
-		###################################################################
-		
-	
-
-
+// ERRORMELDUNG: 
+} else { 
+	echo '<h1>ReLive Chapter API</h1>';
+	echo $info. '<br>@Developer: Michael Kaufmann 2013';
+}
 ?>
