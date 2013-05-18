@@ -29,6 +29,7 @@ Bitte gebe diesen Link in deinem Podlove Web Player unter <span style="color:#f0
 #
 
 if($_GET['api']) {
+<<<<<<< HEAD
 		
 	//get in var:
 	$url = $_GET['api'];
@@ -42,6 +43,26 @@ if($_GET['api']) {
 	#
 			
 	#echo $rows;
+=======
+				
+		//get in var:
+		$url = $_GET['api'];
+		$url = $url; //no *.txt!
+				
+		//Abfrage:
+		$count = $url; //test2
+			
+	
+
+		if($count == 'chapters') {
+				
+		
+#############################################################
+# API URL (index.php?api=chapters)
+#
+	//Test gets		
+	#echo $url;
+>>>>>>> 0f92c8dac451cb18630b6342e6b78044dcdc2975
 		
 	//ReRadio
 	$jsonfile = file_get_contents('http://programm.reliveradio.de/api/today-info');
@@ -185,9 +206,26 @@ if (time() < strtotime(substr($suche[23]["starts"], 0, 19))) {
 	###################################################################
 					
 				
+<<<<<<< HEAD
 // ERRORMELDUNG: 
 } else { 
 	echo '<h1>ReLive Chapter API</h1>';
 	echo $info. '<br>@Developer: Michael Kaufmann 2013';
 }
 ?>
+=======
+		# ERRORMELDUNG: 
+		} else { 
+			echo '<h1>ReLive Chapter API</h1>';
+			echo $info. '<br>@Developer: Michael Kaufmann 2013';
+		} 
+
+		#
+		#
+		###################################################################
+		
+	
+
+
+?>
+>>>>>>> 0f92c8dac451cb18630b6342e6b78044dcdc2975
