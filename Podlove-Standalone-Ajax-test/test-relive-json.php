@@ -15,7 +15,7 @@
 	
 		//Rechner Server: Addierung der Stunden + 02:00:00
 		$first 		= 	explode(":",$uhrzeit);
-		$second 	= 	explode(":","02:00:00");
+		$second 	= 	explode(":","02:00:50");
 		$rechner 	= 	mktime(	$first[0] + $second[0], 
 								$first[1] + $second[1], 
 								$first[2] + $second[2] );
@@ -43,16 +43,16 @@
 	$resttime = ($bgleich-$agleich);
 		
 		//Testausgaben Stringtimes
-		echo 'A:'. $agleich. '<br>'; 
-		echo 'B:'. $bgleich. '<br>'; 
+		echo 'A: <span style="color:#0c0;">'. $agleich. '</span> <i>Stringtime Nutzer </i><br>'; 
+		echo 'B: <span style="color:#00f;">'. $bgleich. '</span> <i>Stringtime Relive neue Episode </i><br>'; 
 		//Ausgebe String - Restzeit:
-		echo 'X:'. $resttime. '<br><br>'; 
+		echo 'X: <span style="color:#f00;">'. $resttime. '</span> <i>Rest Stringtime</i><br><br>'; 
 
 
 		//Testausgaben A & B + Restzeit:
-		echo 'A.ser: '. $server. '<br>'; 
-		echo 'B.rel: '. $retime. '<br>';
-		echo 'R.est: '. date("H:i:s", $resttime). '<br>'; 
+		echo 'A.ser: <span style="color:#0c0;">'. $server. '</span> <i>Ges. Zeit Nutzer </i><br>'; 
+		echo 'B.rel: <span style="color:#00f;">'. $retime. '</span> <i>Ges. Zeit Relive neue Episode </i><br>'; 
+		echo 'R.est: <span style="color:#f00;">'. date("H:i:s", $resttime). '</span> <i>Ges. Restzeit von Relive bis neue Episode</i><br>'; 
 
 		//Funktion in Sekunden:
 		function onlineTime($time) {
@@ -64,7 +64,7 @@
 		}
 		$aaa = onlineTime($resttime);
 
-		echo 'R.sek:'. $aaa. '<br>'; 
+		echo 'R.sek: <span style="color:#f00;">'. $aaa. '</span> <i>Ges. Restzeit von Relive in Sekunden</i><br>'; 
 
 
 /*
