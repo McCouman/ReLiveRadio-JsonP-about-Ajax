@@ -10,112 +10,72 @@
 	<script src="libs/jquery-1.9.1.min.js"></script>
 	<script src="static/podlove-web-player.js"></script>
 	
+	
+	<script src="http://cm.wikibyte.org/testcodes/neu-chapters/ajax.js"></script>
 <style>
 .podlovewebplayer_chapterbox.showonplay.active {
-height: auto!important;
+	height: auto!important;
+}
+p#pinfos {
+	font-size: 13px;
+}
+p#pinfos a{
+	font-size: 13px;
+	color:#fff; 
+	text-decoration: underline !important;
+}
+p#pinfos b{
+	font-size: 13px;
+	font-weight: bold;
 }
 </style>
 
 
-<script>
-/**
-*	Chapter PWP JS
-*	@dev: Simon Waldherr
-*/
-
-//this is a "template" for each chapter row
-var rowDummy = $('<tr class="chaptertr" data-start="" data-end="" data-img=""><td class="starttime"><span></span></td><td class="chaptername"></td><td class="timecode">\n<span></span>\n</td>\n</tr>');
-
-/**
-*	Listening JS, new, comming
-*	@dev: Michael McCouman jr.
-*	@js: callback 1 
-*	@call: callback
-*	@id: jsonp_antwort
-*/
-setInterval(function jsonp(){
-  var scripts = document.getElementsByTagName("script");
-  for (i=0; i<scripts.length; i++) {
-    var url = scripts[i].getAttribute("src");
-    if(!url) continue;
-    if(url.indexOf("callback")>=0) {
-      scripts[i].parentNode.removeChild(scripts[i]);
-    }
-  }
-  var now = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+now.getTime()+"&callback=callback";
-  var script = document.createElement("script");
-  script.setAttribute("src", url);
-  script.setAttribute("type", "text/javascript");
-  document.getElementsByTagName("head")[0].appendChild(script);
-  
-}, 10500);
-function callback(data) { 
-  document.getElementById("jsonp_antwort").innerHTML = data;
-}
-
-/**
-*	Cover, Description, Podcastname
-*	@dev: Michael McCouman jr.
-*	@js: callback 2 
-*	@call: infodown
-*	@id: alle
-*/
-setInterval(function jsonps(){
-  var scruppts = document.getElementsByTagName("script");
-  for (i=0; i<scruppts.length; i++) {
-    var url = scruppts[i].getAttribute("src");
-    if(!url) continue;
-    if(url.indexOf("infodown")>=0) {
-      scruppts[i].parentNode.removeChild(scruppts[i]);
-    }
-  }
-  var nieee = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+nieee.getTime()+"&infodown=infodown";
-  var infoddd = document.createElement("script");
-  infoddd.setAttribute("src", url);
-  infoddd.setAttribute("type", "text/javascript");
-  document.getElementsByTagName("head")[0].appendChild(infoddd);
-  
-}, 10500);
-function infodown(data) { 
-  document.getElementById("alles").innerHTML = data;
-}
-</script>
 </head>
 
 <body>
+
+
+
+
+
 	<p>
 		<audio id="testplayer">
 			<source src="http://stream.reliveradio.de:8000/24mobile.mp3" type="audio/mpeg"></source>
 		</audio>
+<?php
+	//ReRadio
+	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
 
-		<script>
-			$('#testplayer').podlovewebplayer({
-				permalink: '...',
-				alwaysShowHours: true,
-				startVolume: 0.8,
-				width: 'auto',
-				summaryVisible: false,
-				chaptersVisible: true,
-				summary: '<p>Summary and even links <a href="http://testpreview.reliveradio.de/stream/technique.chapters">Capter</a></p>',
+	//DeCode Json out:
+	$suche = json_decode($jsonfile,TRUE);
+
+		echo "<script>";
 			
-				
-/*ersetzen nach call2*/		poster: 'samples/coverimage.png',
-/*ersetzen nach call2*/		title: 'PWP001 – Lorem ipsum dolor sit amet',
-/*ersetzen nach call2*/		subtitle: '...',
-				
-				
-/*ersetzen nach call1*/		chapters: [{'start':'00:00:00.000','title':'a',   'image':''}
-,{'start':'00:00:10.500','title':'Chapter Two',   'image':'samples/coverimage-red.png'}
-,{'start':'00:00:20.500','title':'Chapter Three', 'image':'http://static.reliveradio.de/logos/brainshares.jpg'}
-,{'start':'00:00:30.000','title':'Chapter Four',  'image':'samples/coverimage-blue.png'}],
-				
-				duration: '24:00.000' //Gesammtzeit 
+		echo "$('#testplayer').podlovewebplayer({ \n";
+		echo "			poster: 'samples/reliveradio.png', \n";
+		echo "			title: 'ReLive Radio', \n";
+		echo "			permalink: '...', \n";
+		echo "			subtitle: 'Dein Podcast Radio', \n";
+ 		echo "			chapters: [ \n";
+ 		echo "					{'start':'00:00:00.000','title':'". $suche["live_episode"]["db"]["name"]. " - ". $suche["live_episode"]["track_title"] ."', 'image':'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg'} \n";
+		
+		for($i = 0; $i < count($suche["upcoming_episodes"][0]); ++$i) { 
+			echo "					,{'start':'00:00:00.000','title':'". $suche["upcoming_episodes"][$i]["db"]["name"] ." - ". $suche["upcoming_episodes"][$i]["track_title"]. "', 'image':''} \n"; 
+		} 
+		echo "					], \n";					
 
-			});
-		</script>
+
+		?>
+		summary: '<p id="pinfos">Das <a href="http://reliveradio.de">ReliveRadio</a> sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. <br><br><b>Motivation</b><br><br>Zum einen, möchten wir mit dem ReliveRadio Menschen erreichen, die sich erst wenig oder gar nicht mit dem Format Podcast beschäftigt haben und so eine niederschwellige Einstiegsmöglichkeit bieten. Zum anderen soll das ReliveRadio aber auch Hörern die Gelegenheit geben, neue Podcastformate kennen zu lernen. Ansonsten möchten wir dazu beitragen, dass Podcasts auch mit geringer Bandbreite jederzeit auf dem Smartphone, dem Smart-TV, im Auto oder auf anderen Geräten gehört werden können.</p>',
+		duration: '24:00:00',
+		alwaysShowHours: true,
+		startVolume: 0.8,
+		width: 'auto',
+		summaryVisible: false,
+		chaptersVisible: true
+	});
+</script>
 	</p>
-
 </body>
 </html>
