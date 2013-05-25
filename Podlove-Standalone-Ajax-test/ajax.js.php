@@ -1,3 +1,54 @@
+<?php
+	//read json:
+	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
+
+	//DeCode Json Out:
+	$suche = json_decode($jsonfile,TRUE);
+	
+
+
+	##### Angaben - Zeit #########
+	//Serverzeit
+	$timestamp = time();
+	$uhrzeit = date("H:i:s",$timestamp);
+	
+		//Rechner Server: Addierung der Stunden + 02:00:00
+		$first 		= 	explode(":",$uhrzeit);
+		$second 	= 	explode(":","02:00:59.998");
+		$rechner 	= 	mktime(	$first[0] + $second[0], 
+								$first[1] + $second[1], 
+								$first[2] + $second[2] );
+		
+	##### Abgleich - Zeit #########
+	//ReLive Time (gerade läuft:)
+	$retime = substr($suche["live_episode"]["ends"], 11,-6);
+		
+	//Server Time:
+	#$server = date("H:i:s", $rechner);
+	$server = 	"20:34:58";
+	
+	# Wandler
+	//Serverzeit, ReliveZeit:
+	$agleich = strtotime($server);
+	$bgleich = strtotime($retime);
+	
+	//Berechne lasttime bis new episode
+	$resttime = ($bgleich-$agleich);
+		
+		
+		//Funktion in Sekunden:
+		function onlineTime($time) {
+    		$time=explode(':',$time);
+    		$sec = $time[0];
+    		$sec+=$time[1]*60;
+    		$sec+=$time[2]*3600;
+    			return $sec;
+		}
+		$aaa = onlineTime($resttime);
+?>
+
+
+
 //this is a "template" for each chapter row
 var rowDummy = $('<tr class="chaptertr" data-start="" data-end="" data-img=""><td class="starttime"><span></span></td><td class="chaptername"></td><td class="timecode">\n<span></span>\n</td>\n</tr>');
 
@@ -26,7 +77,7 @@ setInterval( function jsonp(){
   script.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(script);
   
-}, 10500);
+}, <?php echo $aaa; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function callback(data) { 
@@ -57,7 +108,7 @@ setInterval( function jsonps(){
   relivecoverajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivecoverajax);
   
-}, 10500);
+}, <?php echo $aaa; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivecoverdata(data) { 
@@ -88,7 +139,7 @@ setInterval( function jsonps(){
   relivetitlettajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivetitlettajax);
   
-}, 10500);
+}, <?php echo $aaa; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivetitlenamedata(data) { 
@@ -119,7 +170,7 @@ setInterval( function jsonps(){
   relivedescajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivedescajax);
   
-}, 10500);
+}, <?php echo $aaa; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivedescdata(data) { 
@@ -150,7 +201,7 @@ setInterval( function jsonps(){
   reliveajphpajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(reliveajphpajax);
   
-}, 10500);
+}, <?php echo $aaa; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function reliveajaxphpdata(data) { 

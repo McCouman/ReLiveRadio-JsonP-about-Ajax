@@ -26,7 +26,8 @@
 		
 	//Server Time:
 	$server = date("H:i:s", $rechner);
-			
+		#$server = 	"21:34:50";			
+		
 		//Test: Serverzeit+2Stunden:
 		#echo 'Livetime:'. $server.'<br><br>';
 
@@ -57,9 +58,9 @@
 		//Funktion in Sekunden:
 		function onlineTime($time) {
     		$time=explode(':',$time);
-    		$sec = $time[0]*3600;
+    		$sec = $time[0];
     		$sec+=$time[1]*60;
-    		$sec+=$time[2];
+    		$sec+=$time[2]*3600;
     			return $sec;
 		}
 		$aaa = onlineTime($resttime);
