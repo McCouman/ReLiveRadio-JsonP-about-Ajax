@@ -31,27 +31,40 @@
 		#echo 'Livetime:'. $server.'<br><br>';
 
 		//Testausgaben A & B
-		echo 'O.A:'. $server. '<br>'; 
-		echo 'O.B:'. $retime. '<br>';
+		#echo 'O.A:'. $server. '<br>'; 
+		#echo 'O.B:'. $retime. '<br>';
 	
-	//Wandler
+	# Wandler
+	//Serverzeit, ReliveZeit:
 	$agleich = strtotime($server);
 	$bgleich = strtotime($retime);
+	
+	//Berechne lasttime bis new episode
+	$resttime = ($bgleich-$agleich);
 		
 		//Testausgaben Stringtimes
 		echo 'A:'. $agleich. '<br>'; 
 		echo 'B:'. $bgleich. '<br>'; 
-
-	//Berechne lasttime bis new episode
-	$resttime = ($bgleich-$agleich);
-		
 		//Ausgebe String - Restzeit:
-		echo 'X:'. $resttime. '<br>'; 
+		echo 'X:'. $resttime. '<br><br>'; 
 
 
+		//Testausgaben A & B + Restzeit:
+		echo 'A.ser: '. $server. '<br>'; 
+		echo 'B.rel: '. $retime. '<br>';
+		echo 'R.est: '. date("H:i:s", $resttime). '<br>'; 
 
+		//Funktion in Sekunden:
+		function onlineTime($time) {
+    		$time=explode(':',$time);
+    		$sec = $time[0]*3600;
+    		$sec+=$time[1]*60;
+    		$sec+=$time[2];
+    			return $sec;
+		}
+		$aaa = onlineTime($resttime);
 
-
+		echo 'R.sek:'. $aaa. '<br>'; 
 
 
 /*
