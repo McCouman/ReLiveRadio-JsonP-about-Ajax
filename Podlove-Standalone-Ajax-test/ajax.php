@@ -27,8 +27,8 @@
 		$first 		= 	explode(":",$uhrzeit);
 		$second 	= 	explode(":","02:00:00");
 		$rechner 	= 	mktime(	$first[0] + $second[0], 
-								$first[1] + $second[1], 
-								$first[2] + $second[2] );
+							$first[1] + $second[1], 
+							$first[2] + $second[2] );
 	
 	//Server Time:
 	$server = date("H:i:s", $rechner);

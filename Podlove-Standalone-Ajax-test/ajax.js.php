@@ -1,49 +1,4 @@
 <?php
-	//read json:
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
-
-	//DeCode Json Out:
-	$suche = json_decode($jsonfile,TRUE);
-	
-
-
-	##### Angaben - Zeit #########
-	//Serverzeit
-	$timestamp = time();
-	$uhrzeit = date("H:i:s",$timestamp);
-	
-		//Rechner Server: Addierung der Stunden + 02:00:00
-		$first 		= 	explode(":",$uhrzeit);
-		$second 	= 	explode(":","02:00:59.998");
-		$rechner 	= 	mktime(	$first[0] + $second[0], 
-								$first[1] + $second[1], 
-								$first[2] + $second[2] );
-		
-	##### Abgleich - Zeit #########
-	//ReLive Time (gerade läuft:)
-	$retime = substr($suche["live_episode"]["ends"], 11,-6);
-		
-	//Server Time:
-	#$server = date("H:i:s", $rechner);
-	$server = 	"20:34:58";
-	# Wandler
-	//Serverzeit, ReliveZeit:
-	$agleich = strtotime($server);
-	$bgleich = strtotime($retime);
-	
-	//Berechne lasttime bis new episode
-	$resttime = ($bgleich-$agleich);
-		
-		
-		//Funktion in Sekunden:
-		function onlineTime($time) {
-    		$time=explode(':',$time);
-    		$sec = $time[0];
-    		$sec+=$time[1]*60;
-    		$sec+=$time[2]*3600;
-    			return $sec;
-		}
-		#$aaa = onlineTime($resttime);
 		$aaa = 60999;
 		$zu = "";
 ?>
