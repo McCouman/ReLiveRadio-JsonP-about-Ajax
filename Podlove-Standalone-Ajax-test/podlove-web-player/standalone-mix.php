@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>ReLive Radio - standalone v.1.2</title>
+	<title>ReLive Radio - Kultur - standalone v.1.3</title>
 
 	<link href="static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
 	<script src="libs/html5shiv.js"></script>
