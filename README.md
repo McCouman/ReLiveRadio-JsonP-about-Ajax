@@ -7,7 +7,7 @@ ReLiveRadio-JsonP-about-Ajax
 * @version: 1.2rc
 */</pre>
 
-<b>Standalone WebPlayer unter: </b>
+<b>Standalone WebPlayers in Standard, Mix, Technik, Kultur  unter: </b>
 <ul>
 <li>http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/standalone.php </li>
 </ul>
