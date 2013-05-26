@@ -53,8 +53,8 @@ p#pinfos b{
 		$first 		= 	explode(":",$uhrzeit);
 		$second 	= 	explode(":","02:00:50");
 		$rechner 	= 	mktime(	$first[0] + $second[0], 
-								$first[1] + $second[1], 
-								$first[2] + $second[2] );
+						$first[1] + $second[1], 
+						$first[2] + $second[2] );
 		
 	##### Abgleich - Zeit #########	
 	# Server Time:
@@ -81,6 +81,7 @@ echo "chapters: [ \n";
 for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) { 
   echo ",{'start':'". date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][$i]["starts"], 11,-6))-strtotime($server))) ."','title':'". preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["db"]["name"]) ." - ". preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["track_title"]). "', 'image':'http://static.reliveradio.de/logos/".$suche["upcoming_episodes"][$i]["db"]["slugintern"]. ".jpg'} \n"; 
 } 
+
 echo "], \n";					
 echo "summary: '<p id=\"pinfos\">Das <a href=\"http://reliveradio.de\">ReliveRadio</a> sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. <br><br><b>Motivation</b><br><br>Zum einen, möchten wir mit dem ReliveRadio Menschen erreichen, die sich erst wenig oder gar nicht mit dem Format Podcast beschäftigt haben und so eine niederschwellige Einstiegsmöglichkeit bieten. Zum anderen soll das ReliveRadio aber auch Hörern die Gelegenheit geben, neue Podcastformate kennen zu lernen. Ansonsten möchten wir dazu beitragen, dass Podcasts auch mit geringer Bandbreite jederzeit auf dem Smartphone, dem Smart-TV, im Auto oder auf anderen Geräten gehört werden können.</p>', \n";
 echo "duration: '24:00:00',  \n";
@@ -91,6 +92,7 @@ echo "summaryVisible: false, \n";
 echo "chaptersVisible: true \n";
 echo "}); \n";	
 echo "</script>\n";
+#######################################
 ?>
 </p>
 </body>
