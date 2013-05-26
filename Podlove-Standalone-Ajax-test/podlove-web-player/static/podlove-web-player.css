@@ -21,6 +21,9 @@ div.mejs-time.mejs-currenttime-container span.mejs-currenttime {
 }
 div.summarydiv { margin-top:-15px !important; }
 div.togglers { margin-top:15px !important; }
+span.mejs-duration,
+span.mejs-time-float,
+span.mejs-time-float-current,
 div.togglers a.showcontrols.infobuttons.pwp-icon-clock,
 div.togglers a.showsharebuttons.infobuttons.pwp-icon-export,
 div.togglers a.showdownloadbuttons.infobuttons.pwp-icon-download {
