@@ -4,13 +4,13 @@ ReLiveRadio-JsonP-about-Ajax
 * @API: <a href="https://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">ReLive Radio</a> Json API
 * @info: Implementierung der neusten Episoden, im Chapters des Podlove-Web-Players.
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 0.2
+* @version: 1.2rc
 */</pre>
 
 <b>Testsysteme:</b><br>
-Siehe auch die API auf dem Testsystem unter:<br> http://cm.wikibyte.org/testcodes/<br>
+Standalone WebPlayer unter: http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/standalone.php<br>
 
-Test WebPlayer: <br> http://cm.wikibyte.org/testbereich/test-relive-player/
+Siehe auch die API auf dem Testsystem unter:<br> http://cm.wikibyte.org/testcodes/ und den WebPlayer Shortcode: <br> http://cm.wikibyte.org/testbereich/test-relive-player/
 
 <br>
 <br>
