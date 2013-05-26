@@ -7,13 +7,16 @@ ReLiveRadio-JsonP-about-Ajax
 * @version: 1.2rc
 */</pre>
 
+<b>Standalone WebPlayer unter: </b>
+<ul>
+<li>http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/standalone.php </li>
+</ul>
+
 <b>Testsysteme:</b><br>
-Standalone WebPlayer unter: http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/standalone.php<br>
-
-Siehe auch die API auf dem Testsystem unter:<br> http://cm.wikibyte.org/testcodes/ und den WebPlayer Shortcode: <br> http://cm.wikibyte.org/testbereich/test-relive-player/
-
-<br>
-<br>
+<ul>
+<li>Siehe auch die API auf dem Testsystem unter: http://cm.wikibyte.org/testcodes/ </li>
+<li>WebPlayer Shortcode: http://cm.wikibyte.org/testbereich/test-relive-player/ </li>
+</ul>
 
 <b>Entwicklung:</b><br>
 <ul>
