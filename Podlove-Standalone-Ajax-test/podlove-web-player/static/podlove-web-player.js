@@ -453,7 +453,9 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 		}));
 
 
-		
+		//this is a "template" for each chapter row
+		var rowDummy = $('<tr class="chaptertr" data-start="" data-end="" data-img=""><td class="starttime"><span></span></td><td class="chaptername"></td><td class="timecode">\n<span></span>\n</td>\n</tr>');
+
 		//third round: build actual dom table
 		$.each(tempchapters, function (i) {
 			var finalchapter = !tempchapters[i + 1],
@@ -566,6 +568,27 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 				return false;
 			});
 
+			metainfo.find('a.showcontrols').on('click', function () {
+				podlovewebplayer_timecontrol.toggleClass('active');
+				if (podlovewebplayer_sharebuttons !== undefined) {
+					if (podlovewebplayer_sharebuttons.hasClass('active')) {
+						podlovewebplayer_sharebuttons.removeClass('active');
+					} else if (podlovewebplayer_downloadbuttons.hasClass('active')) {
+						podlovewebplayer_downloadbuttons.removeClass('active');
+					}
+				}
+				return false;
+			});
+
+			metainfo.find('a.showsharebuttons').on('click', function () {
+				podlovewebplayer_sharebuttons.toggleClass('active');
+				if (podlovewebplayer_timecontrol.hasClass('active')) {
+					podlovewebplayer_timecontrol.removeClass('active');
+				} else if (podlovewebplayer_downloadbuttons.hasClass('active')) {
+					podlovewebplayer_downloadbuttons.removeClass('active');
+				}
+				return false;
+			});
 
 			metainfo.find('a.showdownloadbuttons').on('click', function () {
 				podlovewebplayer_downloadbuttons.toggleClass('active');
@@ -960,16 +983,16 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 						}
 					});
 
-					wrapper.prepend('<div id="alles" class="podlovewebplayer_meta"></div>');
+					wrapper.prepend('<div class="podlovewebplayer_meta"></div>');
 
 					wrapper.find('.podlovewebplayer_meta').prepend('<a class="bigplay" title="Play Episode" href="#"></a>');
 					if (params.poster !== undefined) {
 						wrapper.find('.podlovewebplayer_meta').append(
-							'<div class="coverart"><img class="coverimg" src="' + params.poster + '" data-img="' + params.poster + '" alt=""></div>');
+							'<div id="ReLiveCover" class="coverart"><img class="coverimg" src="' + params.poster + '" data-img="' + params.poster + '" alt=""></div>');
 					}
 					if ($(player).attr('poster') !== undefined) {
 						wrapper.find('.podlovewebplayer_meta').append(
-							'<div class="coverart"><img src="' + $(player).attr('poster') + '" alt=""></div>');
+							'<div id="ReLiveCover" class="coverart"><img src="' + $(player).attr('poster') + '" alt=""></div>');
 					}
 				}
 
@@ -989,7 +1012,7 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 				}
 				if (params.subtitle !== undefined) {
 					wrapper.find('.podlovewebplayer_meta').append(
-						'<div class="subtitle">' + params.subtitle + '</div>');
+						'<div id="ReLiveTitle" class="subtitle">' + params.subtitle + '</div>');
 				} else {
 					if (params.title !== undefined) {
 						if (params.title.length < 42) {
@@ -997,7 +1020,7 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 						}
 					}
 					wrapper.find('.podlovewebplayer_meta').append(
-						'<div class="subtitle"></div>');
+						'<div id="ReLiveTitle" class="subtitle"></div>');
 				}
 
 				//always render toggler buttons wrapper
@@ -1021,13 +1044,15 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 					wrapper.find('.togglers').append(
 						'<a href="#" class="infowindow infobuttons pwp-icon-info-circle" title="More information about this"></a>');
 					wrapper.find('.podlovewebplayer_meta').after(
-						'<div class="summary' + summaryActive + '"><div class="summarydiv">' + params.summary + '</div></div>');
+						'<div id="ReLiveDec" class="summary' + summaryActive + '"><div class="summarydiv">' + params.summary + '</div></div>');
 				}
 				if (params.chapters !== undefined) {
 					wrapper.find('.togglers').append(
 						'<a href="#" class="chaptertoggle infobuttons pwp-icon-list-bullet" title="Show/hide chapters"></a>');
 				}
-				
+				if (params.hidetimebutton !== true) {
+					wrapper.find('.togglers').append('<a href="#" class="showcontrols infobuttons pwp-icon-clock" title="Show/hide time navigation controls"></a>');
+				}
 			}
 
 			var timecontrolsActive = "";
@@ -1054,7 +1079,7 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 			wrapper.find('.podlovewebplayer_timecontrol').append('<a href="#" class="forwardbutton infobuttons pwp-icon-fast-fw" title="Fast forward 30 seconds"></a>');
 			if ((wrapper.closest('.podlovewebplayer_wrapper').find('.episodetitle a').attr('href') !== undefined) && (params.hidesharebutton !== true)) {
 				wrapper.append('<div class="podlovewebplayer_sharebuttons podlovewebplayer_controlbox' + sharebuttonsActive + '"></div>');
-				wrapper.find('.togglers').append('');
+				wrapper.find('.togglers').append('<a href="#" class="showsharebuttons infobuttons pwp-icon-export" title="Show/hide sharing controls"></a>');
 				wrapper.find('.podlovewebplayer_sharebuttons').append('<a href="#" class="currentbutton infobuttons pwp-icon-link" title="Get URL for this"></a>');
 				wrapper.find('.podlovewebplayer_sharebuttons').append('<a href="#" target="_blank" class="tweetbutton infobuttons pwp-icon-twitter" title="Share this on Twitter"></a>');
 				wrapper.find('.podlovewebplayer_sharebuttons').append('<a href="#" target="_blank" class="fbsharebutton infobuttons pwp-icon-facebook" title="Share this on Facebook"></a>');

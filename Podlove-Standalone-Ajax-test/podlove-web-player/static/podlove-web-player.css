@@ -16,8 +16,16 @@ p#pinfos b{
 	font-size: 13px;
 	font-weight: bold;
 }
-
-
+div.mejs-time.mejs-currenttime-container span.mejs-currenttime {
+ color: #fff !important;
+}
+div.summarydiv { margin-top:-15px !important; }
+div.togglers { margin-top:15px !important; }
+div.togglers a.showcontrols.infobuttons.pwp-icon-clock,
+div.togglers a.showsharebuttons.infobuttons.pwp-icon-export,
+div.togglers a.showdownloadbuttons.infobuttons.pwp-icon-download {
+	display:none!important;
+}
 
 /*
  * ===========================================

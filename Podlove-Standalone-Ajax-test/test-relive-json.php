@@ -6,8 +6,6 @@
 	//DeCode Json Out:
 	$suche = json_decode($jsonfile,TRUE);
 	
-
-
 	##### Angaben - Zeit #########
 	//Serverzeit
 	$timestamp = time();
