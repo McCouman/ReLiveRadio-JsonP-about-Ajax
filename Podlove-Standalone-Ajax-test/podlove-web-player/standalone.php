@@ -2,49 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Demo</title>
+	<title>ReLive Radio - standalone v.1.2</title>
 
 	<link href="static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
-
 	<script src="libs/html5shiv.js"></script>
 	<script src="libs/jquery-1.9.1.min.js"></script>
 	<script src="static/podlove-web-player.js"></script>
-	
-	<script src="http://cm.wikibyte.org/testcodes/neu-chapters/ajax.js.php"></script>
-<style>
-.podlovewebplayer_chapterbox.showonplay.active {
-	height: auto!important;
-}
-p#pinfos {
-	font-size: 13px;
-}
-p#pinfos a{
-	font-size: 13px;
-	color:#fff; 
-	text-decoration: underline !important;
-}
-p#pinfos b{
-	font-size: 13px;
-	font-weight: bold;
-}
-</style>
-
-
-</head>
-<body>
-<p>
-<audio id="testplayer">
-	<source src="http://stream.reliveradio.de:8000/24mobile.mp3" type="audio/mpeg"></source>
-</audio>
 <?php
+##### Relive Includes #########
+	
+	//StreamUrl:
+	$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3";
+
+##### Relive Ajax #########
+
+	//für späteres including und URL
+	echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/ajax.js.php"></script>'; 
+
+##### Relive Json #########
+
 	//ReRadio
 	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
 
 	//DeCode Json out:
 	$suche = json_decode($jsonfile,TRUE);
 
-
 ##### Angaben - Zeit #########
+	
 	//Serverzeit
 	$timestamp = time();
 	$uhrzeit = date("H:i:s",$timestamp);
@@ -56,17 +40,28 @@ p#pinfos b{
 						$first[1] + $second[1], 
 						$first[2] + $second[2] );
 		
-	##### Abgleich - Zeit #########	
-	# Server Time:
+##### Abgleich - Zeit #########	
+	
+	//Server Time:
 	$server = date("H:i:s", $rechner);
 
-	# Serverzeit:
+	//Serverzeit:
 	$agleich = strtotime($server);
 
+?>
+</head>
+<body>
+<p>
+<?php
 
-#######################################
-echo "<script>\n";
-			
+############################################# //Start - Audio #############################################
+echo '<audio id="testplayer">';
+  echo '<source src="'.$uristream.'" type="audio/mpeg"></source>';
+echo '</audio>';
+############################################# //Ende - Audio ##############################################
+
+####################################### //Start - Podlove Web Player ######################################
+echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
 echo "title: 'ReLive Radio', \n";
@@ -90,10 +85,12 @@ echo "startVolume: 0.8, \n";
 echo "width: 'auto', \n";
 echo "summaryVisible: false, \n";
 echo "chaptersVisible: true \n";
-echo "}); \n";	
+echo "}); \n";
 echo "</script>\n";
-#######################################
+####################################### //End - Podlove Web Player #######################################
+
 ?>
+
 </p>
 </body>
 </html>

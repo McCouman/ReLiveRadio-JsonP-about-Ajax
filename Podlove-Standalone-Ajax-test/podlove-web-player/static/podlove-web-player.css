@@ -1,3 +1,24 @@
+/**
+* ReLiveCallbacks - PodloveWebPlayer - Standards
+*/
+.podlovewebplayer_chapterbox.showonplay.active {
+	height: auto!important;
+}
+p#pinfos {
+	font-size: 13px;
+}
+p#pinfos a{
+	font-size: 13px;
+	color:#fff; 
+	text-decoration: underline !important;
+}
+p#pinfos b{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+
 /*
  * ===========================================
  * Podlove Web Player v2.0.8
