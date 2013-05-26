@@ -39,9 +39,10 @@
 	//Serverzeit, ReliveZeit:
 	$agleich = strtotime($server);
 	$bgleich = strtotime($retime);
+	$cgleich = strtotime(substr($suche["live_episode"]["ends"], 11,-6));
 	
 	//Berechne lasttime bis new episode
-	$resttime = ($bgleich-$agleich);
+	$resttime = ($cgleich-$agleich);
 		
 		//Testausgaben Stringtimes
 		echo 'A: <span style="color:#0c0;">'. $agleich. '</span> <i>Stringtime Nutzer </i><br>'; 
@@ -65,7 +66,10 @@
 		}
 		$aaa = onlineTime($resttime);
 
-		echo 'R.sek: <span style="color:#f00;">'. $aaa. '</span> <i>Ges. Restzeit von Relive in Sekunden</i><br>'; 
+		echo 'O.sek: <span style="color:#f00;">'. $aaa. '</span> <i>Ges. Restzeit von Relive in Sekunden</i><br>'; 
+
+	#echo strtotime(substr($suche["upcoming_episodes"][2]["db"]["ends"], 11,-6));
+	#echo date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][2]["db"]["ends"], 11,-6)) - strtotime(date("H:i:s", $rechner))));
 
 
 /*

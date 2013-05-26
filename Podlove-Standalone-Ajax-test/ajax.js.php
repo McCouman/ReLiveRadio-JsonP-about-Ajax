@@ -26,7 +26,6 @@
 	//Server Time:
 	#$server = date("H:i:s", $rechner);
 	$server = 	"20:34:58";
-	
 	# Wandler
 	//Serverzeit, ReliveZeit:
 	$agleich = strtotime($server);
@@ -44,10 +43,10 @@
     		$sec+=$time[2]*3600;
     			return $sec;
 		}
-		$aaa = onlineTime($resttime);
+		#$aaa = onlineTime($resttime);
+		$aaa = 60999;
+		$zu = "";
 ?>
-
-
 
 //this is a "template" for each chapter row
 var rowDummy = $('<tr class="chaptertr" data-start="" data-end="" data-img=""><td class="starttime"><span></span></td><td class="chaptername"></td><td class="timecode">\n<span></span>\n</td>\n</tr>');
@@ -77,7 +76,9 @@ setInterval( function jsonp(){
   script.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(script);
   
-}, <?php echo $aaa; ?>);
+  
+}, <?php echo $aaa.$zu; ?>);
+
 
 //---------------------------- Entgegennahme der Serverantwort
 function callback(data) { 
@@ -108,7 +109,9 @@ setInterval( function jsonps(){
   relivecoverajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivecoverajax);
   
-}, <?php echo $aaa; ?>);
+  
+}, <?php echo $aaa.$zu; ?>);
+
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivecoverdata(data) { 
@@ -139,7 +142,7 @@ setInterval( function jsonps(){
   relivetitlettajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivetitlettajax);
   
-}, <?php echo $aaa; ?>);
+}, <?php echo $aaa.$zu; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivetitlenamedata(data) { 
@@ -170,7 +173,7 @@ setInterval( function jsonps(){
   relivedescajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivedescajax);
   
-}, <?php echo $aaa; ?>);
+}, <?php echo $aaa.$zu; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivedescdata(data) { 
@@ -201,7 +204,7 @@ setInterval( function jsonps(){
   reliveajphpajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(reliveajphpajax);
   
-}, <?php echo $aaa; ?>);
+}, <?php echo $aaa.$zu; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function reliveajaxphpdata(data) { 

@@ -17,6 +17,47 @@
 	
 global $suche;
 
+
+##### Angaben - Zeit #########
+	//Serverzeit
+	$timestamp = time();
+	$uhrzeit = date("H:i:s",$timestamp);
+	
+		//Rechner Server: Addierung der Stunden + 02:00:00
+		$first 		= 	explode(":",$uhrzeit);
+		$second 	= 	explode(":","02:00:50");
+		$rechner 	= 	mktime(	$first[0] + $second[0], 
+								$first[1] + $second[1], 
+								$first[2] + $second[2] );
+		
+	##### Abgleich - Zeit #########
+	//ReLive Time (gerade läuft:)
+	$retime = substr($suche["live_episode"]["ends"], 11,-6);
+		
+	//Server Time:
+	$server = date("H:i:s", $rechner);
+		#$server = 	"21:34:50";			
+		
+		//Test: Serverzeit+2Stunden:
+		#echo 'Livetime:'. $server.'<br><br>';
+
+		//Testausgaben A & B
+		#echo 'O.A:'. $server. '<br>'; 
+		#echo 'O.B:'. $retime. '<br>';
+	
+	# Wandler
+	//Serverzeit, ReliveZeit:
+	$agleich = strtotime($server);
+	$bgleich = strtotime($retime);
+	
+	//Berechne lasttime bis new episode
+	$resttime = ($bgleich-$agleich);
+		
+
+		//Testausgaben A & B + Restzeit:
+		#echo ''. $server. ''; 
+
+
 ######################################### Chapters Callback
 if (isset($_GET["callback"]) && !empty($_GET["callback"])) {
   $callback = $_GET["callback"];
@@ -30,10 +71,18 @@ if (isset($_GET["callback"]) && !empty($_GET["callback"])) {
   
   	echo $callback. "('";
   	
-			echo '<tr class="chaptertr active loaded" data-start="0.5" data-end="1.5" data-img="..."><td class="starttime"><span>00:01</span></td><td class="chaptername">'.$suche["live_episode"]["db"]["name"]. ' - '.$suche["live_episode"]["track_title"]. '</td><td class="timecode"><span>0:01</span></td></tr>';
-
-		for($i = 0; $i < count($suche["upcoming_episodes"][0]); ++$i) {
-   			echo '<tr class="chaptertr oddchapter loaded" data-start="0.5" data-end="1.5" data-img="..."><td class="starttime"><span>00:01</span></td><td class="chaptername">'.$suche["upcoming_episodes"][$i]["db"]["name"]. ' - '.$suche["upcoming_episodes"][$i]["track_title"]. '</td><td class="timecode"><span>0:01</span></td></tr>';
+		echo '<tr class="chaptertr active loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>00:00:00</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["live_episode"]["ends"], 11, -6) .'</span></td></tr>';
+	
+		
+		for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) {
+   		#	if ($server < substr($suche["upcoming_episodes"][$i]["starts"], 11, -6)) {	
+			 #echo 'nix da'; 
+		#	} else { 
+			
+			
+			echo '<tr class="chaptertr oddchapter loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>'. date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][$i]["starts"], 11,-6))-strtotime($server))) .'</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["upcoming_episodes"][$i]["ends"], 11, -6) .'</span></td></tr>';
+		
+		#	}
 		}
 	
 	echo "')";
@@ -85,4 +134,5 @@ if (isset($_GET["relivedescdata"]) && !empty($_GET["relivedescdata"])) {
 		echo '<p id="pinfos">'.$suche["live_episode"]["db"]["description"]. '</p>';
 	echo "')";
 }
+
 ?>
