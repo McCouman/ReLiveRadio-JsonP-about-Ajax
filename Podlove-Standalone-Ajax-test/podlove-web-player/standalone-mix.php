@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>ReLive Radio - Kultur - standalone v.1.3</title>
+	<title>ReLive Radio - standalone v.1.2</title>
 
 	<link href="static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
 	<script src="libs/html5shiv.js"></script>
@@ -57,21 +57,21 @@
 <p>
 <center>
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #1bb266; width:300px; color:#fff;">
+<div style="background-color: #86ba00; width:300px; color:#fff;">
 		<center><h2 class="genre-header mix">Mix Player</h2></center>
 </div>
 <center><a style="color:#000;" href="./standalone-mix.php">Zum Player</a></center>
 </div>
 
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #49aec0; width:300px; color:#fff;">
+<div style="background-color: #49AEC0; width:300px; color:#fff;">
 		<center><h2 class="genre-header mix">Technik Player</h2></center>
 </div>
 <center><a style="color:#000;" href="./standalone-technik.php">Zum Player</a></center>
 </div>
 
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #fe5a27; width:300px; color:#fff;">
+<div style="background-color: #f55c2e; width:300px; color:#fff;">
 		<center><h2 class="genre-header mix">Kultur Player</h2></center>
 </div>
 <center><a style="color:#000" href="./standalone-kultur.php">Zum Player</a></center>
