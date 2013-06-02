@@ -2,11 +2,11 @@
 
 .mejs-controls .mejs-time-rail .mejs-time-buffering {
 background-image: linear-gradient(-45deg, 
-rgba(0, 184, 51, 0.57) 25%, 
-rgba(3, 172, 71, 0.73) 25%, 
-rgba(3, 160, 85, 0.86) 50%, 
-rgba(0, 158, 89, 0.75) 50%, 
-rgb(0, 126, 70) 75%, 
-rgb(2, 122, 89) 75%, 
-rgb(15, 158, 112))!important;
+rgba(96, 206, 34, 0.77) 25%, 
+rgba(125, 233, 65, 0.77) 25%, 
+rgba(107, 231, 37, 0.77) 50%, 
+rgba(114, 211, 60, 0.77) 50%, 
+rgba(99, 206, 39, 0.77) 75%, 
+rgb(104, 192, 53) 75%, 
+rgba(131, 223, 79, 0.77))!important;
 }
