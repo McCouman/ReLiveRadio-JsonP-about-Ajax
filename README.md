@@ -22,7 +22,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 
 
 <h2>RSWP: Der Standalone WebPlayer</h2>
-<img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/Bildschirmfoto%202013-06-04%20um%2018.21.01.png">
+<a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/Bildschirmfoto%202013-06-04%20um%2018.21.01.png"></a>
 <pre>/**
 * @API: ReLive Standalone WebPlayer 
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
