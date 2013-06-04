@@ -33,9 +33,9 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 
 <h3>RPSA: ReLive Player Style API</h3>
 <b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
-Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code> wählen.
+Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 <ul>
-<li>Standrad: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><code>standalone.php</code></a> //Black Player</li>
+<li>Standard: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><code>standalone.php</code></a> //Black Player</li>
 <li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=mix"><code>standalone.php?css=mix</code></a> //Green</li>
 <li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=technik"><code>standalone.php?css=technik</code></a> //light</li>
 <li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=kultur"><code>standalone.php?css=kultur</code></a> //orange</li>
@@ -50,7 +50,7 @@ Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code> wählen
 
 <h3>RPCA: ReLive Player Color API</h3>
 <b>Der Player kann die RPCA auch seperat mit einer eigenen Farbe eingefärbt werden: </b><br>
-Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code> wählen.
+Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code>
 <ul>
 <li>Bsp.: Rot <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=f00"><code>standalone.php?color=f00</code></a></li>
 <li>Bsp.: Blau <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=44f"><code>standalone.php?color=44f</code></a></li>
