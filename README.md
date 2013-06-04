@@ -1,5 +1,15 @@
 ReLiveRadio-JsonP-about-Ajax
 ============================
+<h3>Über RRJA</h3>
+Dies ist ein Webplayer Projekt zum auslesen und wiederverwenden der Json Api Liste von ReLive Radio und wird entwickelt von Michael McCouman jr. in Zusammenarbeit mit den 
+Gründern von Relive. 
+
+<h3>Ziele</h3>
+Ziel diese Projektes ist es die Weiterverarbeitung der täglichen ReLiveRadio Liste, welche über das Json Format ausgegeben wird, 
+in die "podlovewebplayer_chapters linked - Liste" des Podlove WebPlayers einzubauen. Dies ermöglicht dem Nutzer, die Übersicht
+der noch kommenden Podcastsendungen einzusehen.
+
+
 <pre>/**
 * @API: <a href="https://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">ReLive Radio</a> Json API
 * @info: Implementierung der neusten Episoden, im Chapters des Podlove-Web-Players.
