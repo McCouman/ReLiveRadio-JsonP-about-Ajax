@@ -70,7 +70,7 @@ Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 
 <b>Mehr Informationen zur API gibt es auch unter: </b>
 <ul>
- <li>Beispiel: http://cm.wikibyte.org/testbereich/test-relive-player/ </li>
+ <li>Beispiel: http://cm.wikibyte.org/testcodes/ </li>
 </ul>
 
 <b>Einfügen in den Shorcode des Podlove Web Players: </b><br>
@@ -78,7 +78,7 @@ Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 
 <b>Podlove Webplayer mit ReLive Liste: </b><br>
 <ul>
- <li>Beispiel: http://cm.wikibyte.org/testbereich/ </li>
+ <li>Beispiel: http://cm.wikibyte.org/testbereich/test-relive-player/</li>
 </ul>
 <pre>/**
 * @API: RCA
