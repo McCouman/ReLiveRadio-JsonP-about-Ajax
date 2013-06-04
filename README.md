@@ -11,17 +11,17 @@ in die "podlovewebplayer_chapters linked - Liste" des Podlove WebPlayers einzuba
 der noch kommenden Podcastsendungen einzusehen.<br>
 
 <b>Funktionen der Liste: <i>(seit Version 1.2.a)</i></b><br>
-ReLive Radio ist ein Web-Streaming, so ist über die RR-Liste einzusehen, welche Podcasting in den nächsten Stunden
+ReLive Radio ist ein Web-Streaming so ist über die RR-Liste einzusehen, welche Podcasting in den nächsten Stunden
 auf ReLive ausgestrahlt werden. Über ein Rückinfo (Callback) wird nun die Liste automatisch aktualisiert.
 So werden alte Folgen aus der Liste geleert und zeig nur noch die noch kommenden Podcasts an. Dabei muss die Website, 
 in der der Player spielt nicht von Hand aktualisiert werden und der Stream bleibt am laufen ohne zu unterbrechen.
 
 <b>Zusätzliche Funktionen: <i>(seit Version 1.3.a)</i></b><br>
 Die Ausgabe der gerade laufenden Podcastings werden automatisch mit Coverbild, Podcastname, Titel und Informationen der Sendung
-im Webpayer angezeit. Ist eine Sendung vorbei, so werden alles Informationen automatisch, Live aktualisiert. 
+im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen automatisch, Live aktualisiert. 
 
 
-<h2>RSWP: Der Standalone WebPlayers</h2>
+<h2>RSWP: Der Standalone WebPlayer</h2>
 <pre>/**
 * @API: ReLive Standalone WebPlayer 
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
