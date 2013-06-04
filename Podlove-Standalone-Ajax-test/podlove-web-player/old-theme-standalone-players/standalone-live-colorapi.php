@@ -55,31 +55,6 @@
 </head>
 <body>
 <p>
-<center>
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #86ba00; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Mix Player</h2></center>
-</div>
-<center><a style="color:#000;" href="./standalone-mix.php">Zum Player</a></center>
-</div>
-
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #49AEC0; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Technik Player</h2></center>
-</div>
-<center><a style="color:#000;" href="./standalone-technik.php">Zum Player</a></center>
-</div>
-
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #f55c2e; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Kultur Player</h2></center>
-</div>
-<center><a style="color:#000" href="./standalone-kultur.php">Zum Player</a></center>
-</div>
-</center>
-<br>
-<br>
-
 <?php
 
 ############################################# //Start - Audio #############################################
@@ -93,7 +68,7 @@ echo "<script>\n";
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
 echo "title: 'ReLive Radio', \n";
-echo "permalink: '...', \n";
+echo "permalink: 'http://reliveradio.de', \n";
 echo "subtitle: 'Dein Podcast Radio', \n";
 
 //startepisode (läuft gerade)
@@ -119,7 +94,5 @@ echo "</script>\n";
 
 ?>
 </p>
-<br><br>
-<center><a style="color:#000" href="./standalone.php">StandardPlayer</a></center>
 </body>
 </html>

@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>ReLive Radio - Standard - standalone v.1.2</title>
+	<title>ReLive Radio - standalone v.1.2</title>
 
 	<link href="static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
 	<script src="libs/html5shiv.js"></script>
 	<script src="libs/jquery-1.9.1.min.js"></script>
 	<script src="static/podlove-web-player.js"></script>
 
+
+<link href="http://cm.wikibyte.org/testcodes/neu-chapters/mix.css" rel="stylesheet" media="screen" type="text/css" />
 <?php
 ##### Relive Includes #########
 	
@@ -53,31 +55,6 @@
 </head>
 <body>
 <p>
-<center>
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #86ba00; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Mix Player</h2></center>
-</div>
-<center><a style="color:#000;" href="./standalone-mix.php">Zum Player</a></center>
-</div>
-
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #49AEC0; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Technik Player</h2></center>
-</div>
-<center><a style="color:#000;" href="./standalone-technik.php">Zum Player</a></center>
-</div>
-
-<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
-<div style="background-color: #f55c2e; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Kultur Player</h2></center>
-</div>
-<center><a style="color:#000" href="./standalone-kultur.php">Zum Player</a></center>
-</div>
-</center>
-<br>
-<br>
-
 <?php
 
 ############################################# //Start - Audio #############################################
@@ -91,7 +68,7 @@ echo "<script>\n";
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
 echo "title: 'ReLive Radio', \n";
-echo "permalink: '...', \n";
+echo "permalink: 'http://reliveradio.de', \n";
 echo "subtitle: 'Dein Podcast Radio', \n";
 
 //startepisode (läuft gerade)
@@ -116,7 +93,6 @@ echo "</script>\n";
 ####################################### //End - Podlove Web Player #######################################
 
 ?>
-
 </p>
 </body>
 </html>
