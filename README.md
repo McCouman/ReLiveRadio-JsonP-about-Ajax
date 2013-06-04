@@ -66,10 +66,19 @@ Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code> wählen
 
 
 <h2>RCA: ReLive Chapter API:</h2>
-Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.
+Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.<br>
+
+<b>Mehr Informationen zur API gibt es auch unter: </b>
 <ul>
-<li>Siehe auch die API auf dem Testsystem unter: http://cm.wikibyte.org/testcodes/ </li>
-<li>Beispiel: http://cm.wikibyte.org/testbereich/ </li>
+ <li>Beispiel: http://cm.wikibyte.org/testbereich/test-relive-player/ </li>
+</ul>
+
+<b>Einfügen in den Shorcode des Podlove Web Players: </b><br>
+<code>[podloveaudio src="http:&#47;&#47;stream.reliveradio.de..." chapters="http:&#47;&#47;cm.wikibyte.org/testcodes/chapters.txt"]</code>
+
+<b>Podlove Webplayer mit ReLive Liste: </b><br>
+<ul>
+ <li>Beispiel: http://cm.wikibyte.org/testbereich/ </li>
 </ul>
 <pre>/**
 * @API: RCA
