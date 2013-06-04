@@ -23,10 +23,10 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 	//Variable übergabe CSS Name
 	$css = $_GET["css"];
 		
-		//Vergelich
-		if ($css == 'mix'){ $mix_color = $_GET["css"]; } 					 //mix
-		elseif ($css == 'technik'){ $technik_color = $_GET["css"]; } 		 //technik
-		elseif ($css == 'kultur'){ $kultur_color = $_GET["css"]; } 			 //kultur
+		//Vergleich
+		if ($css == 'mix'){ $mix_color = $_GET["css"]; } //mix
+		elseif ($css == 'technik'){ $technik_color = $_GET["css"]; } //technik
+		elseif ($css == 'kultur'){ $kultur_color = $_GET["css"]; } //kultur
 			//Error
 			else {	echo '<!-- Error CSS API!-->'; }
 
