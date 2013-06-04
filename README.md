@@ -22,6 +22,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 
 
 <h2>RSWP: Der Standalone WebPlayer</h2>
+<img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/Bildschirmfoto%202013-06-04%20um%2018.21.01.png">
 <pre>/**
 * @API: ReLive Standalone WebPlayer 
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
@@ -30,7 +31,6 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 * @version: 0.1.0 - 2.0rc RSWP
 */</pre>
 
-<img src="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Bildschirmfoto%202013-06-04%20um%2018.21.01.png">
 
 <h3>RPSA: ReLive Player Style API</h3>
 <b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
