@@ -20,23 +20,18 @@ in der der Player spielt nicht von Hand aktualisiert werden und der Stream bleib
 Die Ausgabe der gerade laufenden Podcastings werden automatisch mit Coverbild, Podcastname, Titel und Informationen der Sendung
 im Webpayer angezeit. Ist eine Sendung vorbei, so werden alles Informationen automatisch, Live aktualisiert. 
 
+
+<h2>RSWP: Der Standalone WebPlayers</h2>
 <pre>/**
-* @API: <a href="https://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">ReLive Radio</a> Json API
-* @info: Implementierung der neusten Episoden, im Chapters des Podlove-Web-Players.
+* @API: ReLive Standalone WebPlayer 
+* @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
+*        auslesen der ReLive-Json List, Ajax Callbacks über JsonP, Einbau der RPSA & RPCA APIs
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 2.0rc new color and flat design
+* @version: 0.1.0 - 2.0rc RSWP
 */</pre>
 
-<h2>Standalone WebPlayers</h2>
 
-<pre>/**
-* @API: PRSA 
-* @info: Player Style API zum verwenden des Players in den ReLive Themen Farbe
-* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 2.0rc styles
-*/</pre>
-
-<h3>RPSA: ReLive Players Style API</h3>
+<h3>RPSA: ReLive Player Style API</h3>
 <b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code> wählen.
 <ul>
@@ -45,16 +40,15 @@ Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code> wählen
 <li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=technik"><code>standalone.php?css=technik</code></a> //light</li>
 <li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=kultur"><code>standalone.php?css=kultur</code></a> //orange</li>
 </ul>
-
-<h3>RPCA: ReLive Players Color API</h3>
-
 <pre>/**
-* @API: RPCA
-* @info: Player Farbe kann über die Color API selber eingefärbt werden
+* @API: PRSA 
+* @info: Player Style API zum verwenden des Players in den ReLive Themen Farbe
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 2.0rc new coloring
+* @version: 2.0rc styles api
 */</pre>
 
+
+<h3>RPCA: ReLive Player Color API</h3>
 <b>Der Player kann die RPCA auch seperat mit einer eigenen Farbe eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code> wählen.
 <ul>
@@ -63,11 +57,26 @@ Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code> wählen
 <li>Bsp.: Lila <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=a0a"><code>standalone.php?color=a0a</code></a></li>
 <li>Bsp.: Pink <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=f0f"><code>standalone.php?color=f0f</code></a></li>
 </ul>
+<pre>/**
+* @API: RPCA
+* @info: Player Farbe kann über die Color API selber eingefärbt werden
+* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
+* @version: 2.0rc new coloring api
+*/</pre>
 
 
-
-<h2>Relive Shortcodes:</h2>
+<h2>RCA: ReLive Chapter API:</h2>
+Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.
 <ul>
 <li>Siehe auch die API auf dem Testsystem unter: http://cm.wikibyte.org/testcodes/ </li>
-<li>WebPlayer Shortcode: http://cm.wikibyte.org/testbereich/ </li>
+<li>Beispiel: http://cm.wikibyte.org/testbereich/ </li>
 </ul>
+<pre>/**
+* @API: RCA
+* @info: Dynamische Chapter.txt über Json durch <a href="https://github.com/i42n/reliveradio-sendeplan-rails/">reliveradio-sendeplan-rails</a>
+* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
+* @version: 0.1.2 chapter api
+*/</pre>
+
+<h2>ReLive Shortcodes:</h2>
+In Arbeit!
