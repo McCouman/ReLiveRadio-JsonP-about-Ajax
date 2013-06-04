@@ -30,6 +30,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 * @version: 0.1.0 - 2.0rc RSWP
 */</pre>
 
+<img src="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Bildschirmfoto%202013-06-04%20um%2018.21.01.png">
 
 <h3>RPSA: ReLive Player Style API</h3>
 <b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
