@@ -25,7 +25,7 @@ setInterval( function jsonp(){
 
   // Anlegen und Einfügen des neuen Skripts
   var now = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+now.getTime()+"&callback=callback";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+now.getTime()+"&callback=callback";
   var script = document.createElement("script");
   script.setAttribute("src", url);
   script.setAttribute("type", "text/javascript");
@@ -58,7 +58,7 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var relivecoverurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+relivecoverurl.getTime()+"&relivecoverdata=relivecoverdata";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+relivecoverurl.getTime()+"&relivecoverdata=relivecoverdata";
   var relivecoverajax = document.createElement("script");
   relivecoverajax.setAttribute("src", url);
   relivecoverajax.setAttribute("type", "text/javascript");
@@ -91,7 +91,7 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var relivetitletturl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+relivetitletturl.getTime()+"&relivetitlenamedata=relivetitlenamedata";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+relivetitletturl.getTime()+"&relivetitlenamedata=relivetitlenamedata";
   var relivetitlettajax = document.createElement("script");
   relivetitlettajax.setAttribute("src", url);
   relivetitlettajax.setAttribute("type", "text/javascript");
@@ -122,7 +122,7 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var relivedescsurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+relivedescsurl.getTime()+"&relivedescdata=relivedescdata";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+relivedescsurl.getTime()+"&relivedescdata=relivedescdata";
   var relivedescajax = document.createElement("script");
   relivedescajax.setAttribute("src", url);
   relivedescajax.setAttribute("type", "text/javascript");
@@ -153,7 +153,7 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var reliveajaxphpurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax.php?time="+reliveajaxphpurl.getTime()+"&reliveajaxphpdata=reliveajaxphpdata";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+reliveajaxphpurl.getTime()+"&reliveajaxphpdata=reliveajaxphpdata";
   var reliveajphpajax = document.createElement("script");
   reliveajphpajax.setAttribute("src", url);
   reliveajphpajax.setAttribute("type", "text/javascript");

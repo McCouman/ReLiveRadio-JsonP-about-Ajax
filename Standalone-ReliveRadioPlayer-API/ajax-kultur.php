@@ -5,12 +5,12 @@
 *
 *	@Developer: Michael McCouman jr.
 *	@Mail: Support@wikibyte.org
-* 	@Version: 0.1.2a
+* 	@Version: 0.1.3
 *
 */
 
-	//ReRadio
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
+	//ReRadio Kultur
+	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
 
 	//DeCode Json out:
 	$suche = json_decode($jsonfile,TRUE);

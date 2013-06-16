@@ -47,8 +47,9 @@ function rl_include( $atts ) {
    	#
     # create slug array in to shortcode
     extract( shortcode_atts( array(
+    	'stream' => 'mix', //mix, mix-mobile, technik, technik-mobile, kultur, kultur-mobile
     	'style' => '', //mix, technik, kultur
-   		'color' => 'f00', 
+   		'color' => '', //f00
     		'l' => '-10px', 
     		'r' => '-10px',
     		't' => '-20px',
@@ -59,6 +60,7 @@ function rl_include( $atts ) {
 	
 	#
 	# vars for podbe slugs
+	$rlive_stream 	= "{$stream}";
     $rlive_css 		= "{$style}";
     $rlive_coloring = "{$color}";
     	
@@ -74,7 +76,7 @@ function rl_include( $atts ) {
     
     #
     # standalone player
-    $relive_player_url = 'http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?css='.$rlive_css.'&color='.$rlive_coloring.'';
+    $relive_player_url = 'http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream='.$rlive_stream.'&css='.$rlive_css.'&color='.$rlive_coloring.'';
 		
 		//player outs
 		$relive_player_out = $relive_player_url;
