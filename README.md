@@ -120,18 +120,18 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
 <a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode.zip?raw=true">Download</a>
 
 <h5>Einbinden des Shordcodes</h5>
-<code>[relive-radio  style="mix"  color="f00" l="-10px"  r="-10px"  t="-20px" b="-50px" height="560" width="99%"]</code>
+<code>[relive-radio  stream="mix"  style="mix"  color="f00"  l="-10px"  r="-10px"  t="-20px"  b="-50px"  height="560"  width="99%"]</code>
 
  <ul>
   <li>stream="mix" //Stream auswählen (mix, mix-mobile, technik, technik-mobile, kultur, kultur-mobile)</li>
   <li>style="mix" //Fester Style (mix, technik, kultur)</li>
   <li>color="f00" //Eigene Farbe festlegen</li>
  <li></li>
-	 <li>l="-10px" //margin-left</li>
-	 <li>r="-10px" //margin-right</li>
-	 <li>t="-20px" //margin-top</li>
+  <li>l="-10px" //margin-left</li>
+  <li>r="-10px" //margin-right</li>
+  <li>t="-20px" //margin-top</li>
   <li>b="-50px" //margin-bottom</li>
  <li></li>
-	 <li>height="560" //höhe</li>
-	 <li>width="100%" //breite</li>
+  <li>height="560" //höhe</li>
+  <li>width="100%" //breite</li>
  </ul>
