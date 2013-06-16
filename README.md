@@ -2,7 +2,7 @@ Relive Radio WebPlayer
 ============================
 
 <h3>Über RRJA WebPlayer Project</h3>
-Dies ist ein Webplayer Projekt zum auslesen und wiederverwenden der Json Api Liste von ReLive Radio und wird entwickelt von Michael McCouman jr. in Zusammenarbeit mit den 
+Dies ist ein Webplayer Projekt zum auslesen und wiederverwenden der Json Api Liste von Relive Radio und wird entwickelt von Michael McCouman jr. in Zusammenarbeit mit den 
 Gründern von Relive. 
 
 <h4>Ziele</h4>
@@ -11,8 +11,8 @@ in die "podlovewebplayer_chapters linked - Liste" des Podlove WebPlayers einzuba
 der noch kommenden Podcastsendungen einzusehen.<br>
 
 <b>Funktionen der Liste: <i>(seit Version 1.2.a)</i></b><br>
-ReLive Radio ist ein Web-Streaming so ist über die RR-Liste einzusehen, welche Podcasting in den nächsten Stunden
-auf ReLive ausgestrahlt werden. Über ein Rückinfo (Callback) wird nun die Liste automatisch aktualisiert.
+Relive Radio ist ein Web-Streaming so ist über die RR-Liste einzusehen, welche Podcasting in den nächsten Stunden
+auf Relive ausgestrahlt werden. Über ein Rückinfo (Callback) wird nun die Liste automatisch aktualisiert.
 So werden alte Folgen aus der Liste geleert und zeig nur noch die noch kommenden Podcasts an. Dabei muss die Website, 
 in der der Player spielt nicht von Hand aktualisiert werden und der Stream bleibt am laufen ohne zu unterbrechen.
 
@@ -24,7 +24,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 <h2>RSWP: Der Standalone WebPlayer</h2>
 <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen2.png"></a>
 <pre>/**
-* @API: ReLive Standalone WebPlayer 
+* @API: Relive Standalone WebPlayer 
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
 *        auslesen der ReLive-Json List, Ajax Callbacks über JsonP, Einbau der RPSA & RPCA APIs
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
@@ -33,7 +33,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 
 
 <h3>RPSA: Relive Player Style API</h3>
-<b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
+<b>Der Player kann in den Relive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 <ul>
 <li>Standard: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><code>standalone.php</code></a> //Black Player</li>
@@ -43,7 +43,7 @@ Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 </ul>
 <pre>/**
 * @API: PRSA 
-* @info: Player Style API zum verwenden des Players in den ReLive Themen Farbe
+* @info: Player Style API zum verwenden des Players in den Relive Themen Farbe
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
 * @version: 2.0rc styles api
 */</pre>
@@ -67,7 +67,7 @@ Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code>
 
 
 <h2>RCA: Relive Chapter API:</h2>
-Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.<br>
+Zum einfügen den Relive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.<br>
 
 <b>Mehr Informationen zur API gibt es auch unter: </b>
 <ul>
@@ -77,7 +77,7 @@ Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 <b>Einfügen in den Shorcode des Podlove Web Players: </b><br>
 <code>[podloveaudio src="http:&#47;&#47;stream.reliveradio.de..." chapters="http:&#47;&#47;cm.wikibyte.org/testcodes/chapters.txt"]</code>
 
-<b>Podlove Webplayer mit ReLive Liste: </b><br>
+<b>Podlove Webplayer mit Relive Liste: </b><br>
 <ul>
  <li>Beispiel: http://cm.wikibyte.org/testbereich/test-relive-player/</li>
 </ul>
