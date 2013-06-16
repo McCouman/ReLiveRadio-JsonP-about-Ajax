@@ -153,7 +153,7 @@ echo '</audio>';
 echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
-echo "title: 'ReLive Radio', \n";
+echo "title: 'Relive Radio', \n";
 echo "permalink: 'http://reliveradio.de', \n";
 echo "subtitle: 'Dein Podcast Radio', \n";
 

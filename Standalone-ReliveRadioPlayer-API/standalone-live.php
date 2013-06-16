@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>ReLive Radio - Live Player</title>
+	<title>Relive Radio - Live Player</title>
 	<link href="./podlove-web-player/static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
 	<script src="./podlove-web-player/libs/html5shiv.js"></script>
 	<script src="./podlove-web-player/libs/jquery-1.9.1.min.js"></script>
@@ -11,7 +11,7 @@
 
 ################################################ ReLive - Color API ################################################ 
 /**
-*	ReLive - Color API
+*	Relive - Color API
 *	@developer by Michael McCouman jr.
 * 	@date 4 Juni 2013
 *	@version 2.0.a
@@ -50,7 +50,7 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 ################################################ Relive - WebPlayer ################################################
 
 /**
-*	ReLive - WebPlayer
+*	Relive - WebPlayer
 *	@developer by Michael McCouman jr.
 * 	@date 4 Juni 2013
 *	@version 2.0.a
@@ -107,7 +107,7 @@ echo '</audio>';
 echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
-echo "title: 'ReLive Radio', \n";
+echo "title: 'Relive Radio', \n";
 echo "permalink: 'http://reliveradio.de', \n";
 echo "subtitle: 'Dein Podcast Radio', \n";
 
