@@ -31,6 +31,24 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 * @version: 0.1.0 - 2.0rc RSWP
 */</pre>
 
+<h3>RPStA: Relive Player Stream API</h3>
+<b>Der Player kann in den Relive die Hochaufgelösten, wie auch Mobilen Streams <i>mix, technik, kultur</i> und über 
+<i>mix-mobile, technik-mobile, kultur-mobile</i>die RPStA API angesprochen werden: </b><br>
+Das einbinden des Streams erfolgt über: <code>standalone.php?css=STREAM</code>
+<ul>
+<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=mix"><code>standalone-live.php?stream=mix</code></a></li>
+<li>Mix Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=mix-mobile"><code>standalone-live.php?stream=mix-mobile</code></a></li>
+<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik"><code>standalone-live.php?stream=technik</code></a></li>
+<li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik-mobile"><code>standalone-live.php?stream=technik-mobile</code></a></li>
+<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur"><code>standalone-live.php?stream=kultur</code></a></li>
+<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur-mobile"><code>standalone-live.php?stream=kultur-mobile</code></a></li>
+</ul>
+<pre>/**
+* @API: PRStA 
+* @info: Player Stream API zum verwenden der Relive Stream Bereiche in Standard und Mobile MP3 Daten
+* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
+* @version: 2.1rc stream api
+*/</pre>
 
 <h3>RPSA: Relive Player Style API</h3>
 <b>Der Player kann in den Relive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
