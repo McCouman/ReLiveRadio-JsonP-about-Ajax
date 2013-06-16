@@ -1,4 +1,4 @@
-ReLive Radio WebPlayer 
+Relive Radio WebPlayer 
 ============================
 
 <h3>Über RRJA WebPlayer Project</h3>
@@ -32,7 +32,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 */</pre>
 
 
-<h3>RPSA: ReLive Player Style API</h3>
+<h3>RPSA: Relive Player Style API</h3>
 <b>Der Player kann in den ReLive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 <ul>
@@ -49,7 +49,7 @@ Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 */</pre>
 
 
-<h3>RPCA: ReLive Player Color API</h3>
+<h3>RPCA: Relive Player Color API</h3>
 <b>Der Player kann die RPCA auch seperat mit einer eigenen Farbe eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code>
 <ul>
@@ -66,7 +66,7 @@ Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code>
 */</pre>
 
 
-<h2>RCA: ReLive Chapter API:</h2>
+<h2>RCA: Relive Chapter API:</h2>
 Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in WordPress.<br>
 
 <b>Mehr Informationen zur API gibt es auch unter: </b>
@@ -88,5 +88,31 @@ Zum einfügen den ReLive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 * @version: 0.1.2 chapter api
 */</pre>
 
-<h2>ReLive Shortcodes:</h2>
-In Arbeit!
+<h2>RWIS: Relive in Wordpress einbinden:</h2>
+Zum Einbinden des Relive Webplayers in Wordpress, kann der RWS Shortcode genutzt werden. 
+<pre>/**
+* @Shortcode: RWIS
+* @info: Shortcode zum Einbinden des Relive WebPlayers in eine Wordpress Seite
+* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
+* @version: 1.5 iframe shortcode
+*/</pre>
+
+<h5>Plugin Download</h5>
+Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kostenlos heruntergeladen werden:<br>
+<a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode.zip?raw=true">Download</a>
+
+<h5>Einbinden des Shordcodes</h5>
+<code>[relive-radio  style="mix"  color="f00" l="-10px"  r="-10px"  t="-20px" b="-50px" height="560" width="99%"]</code>
+
+ <ul>
+  <li>style="mix" //Fester Style (mix, technik, kultur)</li>
+	 <li>color="f00" //Eigene Farbe festlegen</li>
+ <li></li>
+	 <li>l="-10px" //margin-left</li>
+	 <li>r="-10px" //margin-right</li>
+	 <li>t="-20px" //margin-top</li>
+  <li>b="-50px" //margin-bottom</li>
+ <li></li>
+	 <li>height="560" //höhe</li>
+	 <li>width="100%" //breite</li>
+ </ul>
