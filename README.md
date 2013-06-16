@@ -41,7 +41,7 @@ Das einbinden des Streams erfolgt über: <code>standalone.php?css=STREAM</code>
 <li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik"><code>standalone-live.php?stream=technik</code></a></li>
 <li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik-mobile"><code>standalone-live.php?stream=technik-mobile</code></a></li>
 <li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur"><code>standalone-live.php?stream=kultur</code></a></li>
-<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur-mobile"><code>standalone-live.php?stream=kultur-mobile</code></a></li>
+<li>Kultur Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur-mobile"><code>standalone-live.php?stream=kultur-mobile</code></a></li>
 </ul>
 <pre>/**
 * @API: PRStA 
@@ -123,6 +123,7 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
 <code>[relive-radio  style="mix"  color="f00" l="-10px"  r="-10px"  t="-20px" b="-50px" height="560" width="99%"]</code>
 
  <ul>
+  <li>stream="mix" //Fester Style (mix, mix-mobile, technik, technik-mobile, kultur, kultur-mobile)</li>
   <li>style="mix" //Fester Style (mix, technik, kultur)</li>
 	 <li>color="f00" //Eigene Farbe festlegen</li>
  <li></li>
