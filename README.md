@@ -135,3 +135,95 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
   <li>height="560" //höhe</li>
   <li>width="100%" //breite</li>
  </ul>
+
+<h2>Lizenzen</h2>
+<pre>/*
+ * ===========================================
+ * Podlove Web Player v2.1.0
+ * Licensed under The BSD 2-Clause License
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ===========================================
+ */</pre>
+
+Plugin Name: Podlove Web Player <br>
+Plugin URI: http://podlove.org/podlove-web-player/ <br>
+Description: Video and audio plugin for WordPress built on the MediaElement.js HTML5 media player library. <br>
+Version: 2.1.0 <br>
+Author: Podlove Team - <a href="https://github.com/gerritvanaaken/">Gerrit van Aaken</a>, <a href="https://github.com/simonwaldherr/">Simon Waldherr</a>, <a href="https://github.com/Kambfhase/">Frank Hase</a>, <a href="https://github.com/eteubert/">Eric Teubert</a> and <a href="https://github.com/podlove/podlove-web-player/contributors">others</a><br>
+Author URI: http://podlove.org/ <br>
+License: BSD 2-Clause License <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause <br>
+
+Copyright (c) 2013, Podlove.org - All rights reserved. <br>
+
+Redistribution and use in source and binary forms, with or without modification,  <br>
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions 
+and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation and/or other materials provided 
+with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGE.
+
+
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: ReliveRadio Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
+
+Version: 1.5.1  <br>
+Author: Michael McCouman jr.  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
+
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: ReliveRadio Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.<br>
+
+Version: 2.0.1  <br>
+Author: Michael McCouman jr.  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
+Copyright (c) 2013, Wikibyte.org - All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, 
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions 
+and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation and/or other materials provided 
+with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGE.
