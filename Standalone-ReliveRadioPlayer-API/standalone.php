@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>ReLive Radio - Standard - standalone v.1.2</title>
-
+	<title>Relive Radio - Standard v.2.0.1</title>
+	
 	<link href="./podlove-web-player/static/podlove-web-player.css" rel="stylesheet" media="screen" type="text/css" />
 	<script src="./podlove-web-player/libs/html5shiv.js"></script>
 	<script src="./podlove-web-player/libs/jquery-1.9.1.min.js"></script>
 	<script src="./podlove-web-player/static/podlove-web-player.js"></script>
 <?php
+
+## Relive - CSS API #######################################################################################################
 /**
-*	ReLive - Color API
+*	Relive - Color API
 *	@developer by Michael McCouman jr.
 * 	@date 4 Juni 2013
 *	@version 2.0.a
@@ -21,78 +23,112 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 	
 	//Variable übergabe CSS Name
 	$css = $_GET["css"];
-
-
-		//mix
-		if ($css == 'mix'){
-			$mix_color = $_GET["css"];
-		} 
-	
-		//technik
-		elseif ($css == 'technik'){
-			$technik_color = $_GET["css"];
-		} 
-	
-		//kultur
-		elseif ($css == 'kultur'){
-			$kultur_color = $_GET["css"];
-		} 
 		
-		else {
-			echo 'geht nicht!';
-		}
+		//Vergelich
+		if ($css == 'mix'){ $mix_color = $_GET["css"]; } 					 //mix
+		elseif ($css == 'technik'){ $technik_color = $_GET["css"]; } 		 //technik
+		elseif ($css == 'kultur'){ $kultur_color = $_GET["css"]; } 			 //kultur
+			//Error
+			else {	echo '<!-- No CSS API!-->'; }
 
-		#Ausgabe CSS:
+		//Ausgabe Relive css: 
 		echo '<link href="http://cm.wikibyte.org/testcodes/neu-chapters/css/'.$mix_color .''. $technik_color .''. $kultur_color.'.css" rel="stylesheet" media="screen" type="text/css" />';
 
-
-
-
 } else {
-
-		############## Easy Color Player 
-		if (isset($_GET["color"]) && !empty($_GET["color"])) {
-  			$color = $_GET["color"];
-
-				?>
-					<style>	.podlovewebplayer_wrapper{color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_meta,.podlovewebplayer_wrapper .podlovewebplayer_meta .subtitle,.podlovewebplayer_wrapper .podlovewebplayer_meta h3,.podlovewebplayer_wrapper .podlovewebplayer_meta h3 a,.podlovewebplayer_meta + .summary,.podlovewebplayer_wrapper .podlovewebplayer_controlbox,.podlovewebplayer_wrapper .podlovewebplayer_meta .togglers{color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_top,.podlovewebplayer_wrapper .podlovewebplayer_meta{background:#<?php echo $color; ?>;background:-moz-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#<?php echo $color; ?>),color-stop(100%,#<?php echo $color; ?>));background:-webkit-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-o-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-ms-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:linear-gradient(to bottom,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#<?php echo $color; ?>',endColorstr='#<?php echo $color; ?>',GradientType=0 );}.podlovewebplayer_meta .bigplay{color:#ffffff;border-color:#ffffff !important;}.podlovewebplayer_meta .bigplay:hover,.podlovewebplayer_meta .bigplay:active,.podlovewebplayer_meta .bigplay.playing:hover,.podlovewebplayer_meta .bigplay.playing:active{color:#ffffff !important;border-color:#ffffff !important;text-shadow:0px 0px 4px #ffffff;text-decoration:none;filter:dropshadow(color=#ffffff,offx=0,offy=0);cursor:pointer;}.podlovewebplayer_meta .togglers .infobuttons,.podlovewebplayer_meta .togglers .infobuttons a,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a{color:#ffffff;text-shadow:0px 0px 1px #ffffff;text-decoration:none;}.podlovewebplayer_meta .togglers .infobuttons:hover,.podlovewebplayer_meta .togglers .infobuttons a:hover,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons:hover,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a:hover{text-shadow:0px 0px 4px #ffffff;text-decoration:none;filter:dropshadow(color=#ffffff,offx=0,offy=0);cursor:pointer;}.podlovewebplayer_meta + .summary,.podlovewebplayer_wrapper .podlovewebplayer_controlbox{background:#<?php echo $color; ?> !important;border-left:3px #<?php echo $color; ?> solid !important;border-right:3px #<?php echo $color; ?> solid !important;}.podlovewebplayer_wrapper .podlovewebplayer_controlbox{background:#<?php echo $color; ?> !important;border-left:3px #<?php echo $color; ?> solid !important;border-right:3px #<?php echo $color; ?> solid !important;}.mejs-controls .mejs-play button{background-position:0 0;}.mejs-controls .mejs-pause button{background-position:0 -16px;}.mejs-controls .mejs-stop button{background-position:-112px 0;}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0;}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px;}.mejs-controls .mejs-mute button{background-position:-16px -16px;}.mejs-controls .mejs-unmute button{background-position:-16px 0;}.mejs-controls .mejs-captions-button button{background-position:-48px 0;}.mejs-controls .mejs-loop-off button{background-position:-64px -16px;}.mejs-controls .mejs-loop-on button{background-position:-64px 0;}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px;}.mejs-controls .mejs-backlight-on button{background-position:-80px 0;}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0;}.podlovewebplayer_wrapper .mejs-container .mejs-inner .mejs-controls{background:#<?php echo $color; ?> !important;background:-moz-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#<?php echo $color; ?>),color-stop(100%,#<?php echo $color; ?>)) !important;background:-webkit-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-o-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-ms-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:linear-gradient(to bottom,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#<?php echo $color; ?>',endColorstr='#<?php echo $color; ?>',GradientType=0 ) !important;}.mejs-container .mejs-controls .mejs-time span{color:#111;}.podlovewebplayer_wrapper .podlovewebplayer_chapterbox{border:3px #<?php echo $color; ?> solid !important;border-bottom:0px #<?php echo $color; ?> solid !important;}.podlovewebplayer_wrapper .podlovewebplayer_tableend{background:#<?php echo $color; ?> !important;-webkit-box-shadow:0px 1px #<?php echo $color; ?>;-moz-box-shadow:0px 1px #<?php echo $color; ?>;box-shadow:0px 1px #<?php echo $color; ?>;}.podlovewebplayer_meta .bigplay, .podlovewebplayer_meta .togglers .infobuttons, .podlovewebplayer_meta .togglers .infobuttons a, .podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons, .podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a {color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_meta .bigplay {border: 5px solid #ffffff !important;}.mejs-container .mejs-controls .mejs-time span{color:#<?php echo $color; ?> !important} </style>
-				<?php		
-		} else {
-
-				echo '<!--Standard Player - No API!-->';
-
-		}
-
-		############
-
-	echo '<!--Color Player Black-->';
-	
+	//Keine Eingaben
+	echo '<!--Standard Player in Black-->';
 }
 
+## Stream API ###############################################################################################################
+// Abfrage welcher Stream ?
+if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
+	
+	//Variable übergabe 
+	$stream = $_GET["stream"];
+		
+		## Mix Stream
+		if ($stream == 'mix'){ 
+			$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+			$names = "Mix";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php"></script>'; 
+		}
+		elseif ($stream == 'mix-mobile'){ 
+			$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3"; 
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+			$names = "Mix";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php"></script>'; 
+		}			 
+		
+		## Technik Stream				 
+		elseif ($stream == 'technik'){ 
+			$uristream = "http://stream.reliveradio.de:8000/technik.mp3";
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technik.json');
+			$names = "Technik";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-technik.php"></script>'; 
+		}			 
+		elseif ($stream == 'technik-mobile'){ 
+			$uristream = "http://stream.reliveradio.de:8000/technikmobile.mp3"; 
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technik.json');
+			$names = "Technik";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-technik.php"></script>'; 
+		}			 
+		
+		## Kultur Stream				 
+		elseif ($stream == 'kultur'){ 
+			$uristream = "http://stream.reliveradio.de:8000/kultur.mp3"; 
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
+			$names = "Kultur";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-kultur.php"></script>'; 
+		}			 
+		elseif ($stream == 'kultur-mobile'){ 
+			$uristream = "http://stream.reliveradio.de:8000/kulturmobile.mp3";
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
+			$names = "Kultur";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-kultur.php"></script>'; 
+		}			 
+		
+		## No Stream API
+		else { 
+			echo "Bitte einen Stream angeben! <span style='color:#f00;'>standalone-live.php?stream=</span> 
+			<br>mix, mix-mobile, technik, technik-mobile, kultur, kultur-mobile"; 
+		}
+
+} else {
+## No Stream API => Standard
+			$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
+			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+			$names = "Mix";
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php"></script>'; 
+}
+## Stream API ###############################################################################################################
+
+
+
+## Color API ###############################################################################################################
+//Easy Color Player 
+if (isset($_GET["color"]) && !empty($_GET["color"])) {
+  			$color = $_GET["color"];
+?><style>.podlovewebplayer_wrapper{color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_meta,.podlovewebplayer_wrapper .podlovewebplayer_meta .subtitle,.podlovewebplayer_wrapper .podlovewebplayer_meta h3,.podlovewebplayer_wrapper .podlovewebplayer_meta h3 a,.podlovewebplayer_meta + .summary,.podlovewebplayer_wrapper .podlovewebplayer_controlbox,.podlovewebplayer_wrapper .podlovewebplayer_meta .togglers{color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_top,.podlovewebplayer_wrapper .podlovewebplayer_meta{background:#<?php echo $color; ?>;background:-moz-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#<?php echo $color; ?>),color-stop(100%,#<?php echo $color; ?>));background:-webkit-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-o-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:-ms-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);background:linear-gradient(to bottom,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#<?php echo $color; ?>',endColorstr='#<?php echo $color; ?>',GradientType=0 );}.podlovewebplayer_meta .bigplay{color:#ffffff;border-color:#ffffff !important;}.podlovewebplayer_meta .bigplay:hover,.podlovewebplayer_meta .bigplay:active,.podlovewebplayer_meta .bigplay.playing:hover,.podlovewebplayer_meta .bigplay.playing:active{color:#ffffff !important;border-color:#ffffff !important;text-shadow:0px 0px 4px #ffffff;text-decoration:none;filter:dropshadow(color=#ffffff,offx=0,offy=0);cursor:pointer;}.podlovewebplayer_meta .togglers .infobuttons,.podlovewebplayer_meta .togglers .infobuttons a,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a{color:#ffffff;text-shadow:0px 0px 1px #ffffff;text-decoration:none;}.podlovewebplayer_meta .togglers .infobuttons:hover,.podlovewebplayer_meta .togglers .infobuttons a:hover,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons:hover,.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a:hover{text-shadow:0px 0px 4px #ffffff;text-decoration:none;filter:dropshadow(color=#ffffff,offx=0,offy=0);cursor:pointer;}.podlovewebplayer_meta + .summary,.podlovewebplayer_wrapper .podlovewebplayer_controlbox{background:#<?php echo $color; ?> !important;border-left:3px #<?php echo $color; ?> solid !important;border-right:3px #<?php echo $color; ?> solid !important;}.podlovewebplayer_wrapper .podlovewebplayer_controlbox{background:#<?php echo $color; ?> !important;border-left:3px #<?php echo $color; ?> solid !important;border-right:3px #<?php echo $color; ?> solid !important;}.mejs-controls .mejs-play button{background-position:0 0;}.mejs-controls .mejs-pause button{background-position:0 -16px;}.mejs-controls .mejs-stop button{background-position:-112px 0;}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0;}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px;}.mejs-controls .mejs-mute button{background-position:-16px -16px;}.mejs-controls .mejs-unmute button{background-position:-16px 0;}.mejs-controls .mejs-captions-button button{background-position:-48px 0;}.mejs-controls .mejs-loop-off button{background-position:-64px -16px;}.mejs-controls .mejs-loop-on button{background-position:-64px 0;}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px;}.mejs-controls .mejs-backlight-on button{background-position:-80px 0;}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0;}.podlovewebplayer_wrapper .mejs-container .mejs-inner .mejs-controls{background:#<?php echo $color; ?> !important;background:-moz-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#<?php echo $color; ?>),color-stop(100%,#<?php echo $color; ?>)) !important;background:-webkit-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-o-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:-ms-linear-gradient(top,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;background:linear-gradient(to bottom,#<?php echo $color; ?> 0%,#<?php echo $color; ?> 100%) !important;filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#<?php echo $color; ?>',endColorstr='#<?php echo $color; ?>',GradientType=0 ) !important;}.mejs-container .mejs-controls .mejs-time span{color:#111;}.podlovewebplayer_wrapper .podlovewebplayer_chapterbox{border:3px #<?php echo $color; ?> solid !important;border-bottom:0px #<?php echo $color; ?> solid !important;}.podlovewebplayer_wrapper .podlovewebplayer_tableend{background:#<?php echo $color; ?> !important;-webkit-box-shadow:0px 1px #<?php echo $color; ?>;-moz-box-shadow:0px 1px #<?php echo $color; ?>;box-shadow:0px 1px #<?php echo $color; ?>;}.podlovewebplayer_meta .bigplay, .podlovewebplayer_meta .togglers .infobuttons, .podlovewebplayer_meta .togglers .infobuttons a, .podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons, .podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons a {color:#ffffff !important;}.podlovewebplayer_wrapper .podlovewebplayer_meta .bigplay {border: 5px solid #ffffff !important;}.mejs-container .mejs-controls .mejs-time span{color:#<?php echo $color; ?> !important} </style><?php		
+//Error
+} else { echo '<!--Standard Player - No Color API!-->'; }
+## Color API ###############################################################################################################
+
+
+
+
+################################################ Relive - WebPlayer ########################################################
 /**
-*	ReLive - Color API
+*	Relive - WebPlayer
 *	@developer by Michael McCouman jr.
 * 	@date 4 Juni 2013
 *	@version 2.0.a
 */
-##### Relive Settings #########
 	
-	//StreamUrl:
-	$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3";
-
-	//Ajax JS Callbacks
-	echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/ajax.js.php"></script>'; 
-
-##### Relive Json #########
-
-	//ReRadio
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technique.json');
-
 	//DeCode Json out:
 	$suche = json_decode($jsonfile,TRUE);
 
-##### Angaben - Zeit #########
-	
+	## Angaben - Zeit #########
 	//Serverzeit
 	$timestamp = time();
 	$uhrzeit = date("H:i:s",$timestamp);
@@ -104,14 +140,12 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 						$first[1] + $second[1], 
 						$first[2] + $second[2] );
 		
-##### Abgleich - Zeit #########	
-	
+	## Abgleich - Zeit #########	
 	//Server Time:
 	$server = date("H:i:s", $rechner);
-
+	
 	//Serverzeit:
 	$agleich = strtotime($server);
-
 ?>
 </head>
 <body>
@@ -119,28 +153,35 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 <center>
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
 <div style="background-color: #86ba00; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Mix Player</h2></center>
+	<center><h2 class="genre-header mix">Mix Player</h2></center>
 </div>
-<center><a style="color:#000;" href="./standalone.php?css=mix">Zum Player</a></center>
+<a style="color:#000;" href="./standalone.php?stream=mix&css=mix">Standard Stream (Mix)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=mix-mobile&css=mix">Mobile Stream (Mix)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=mix">Ohne Farbe</a> <br>
 </div>
+
 
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
 <div style="background-color: #49AEC0; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Technik Player</h2></center>
+	<center><h2 class="genre-header mix">Technik Player</h2></center>
 </div>
-<center><a style="color:#000;" href="./standalone.php?css=technik">Zum Player</a></center>
+<a style="color:#000;" href="./standalone.php?stream=technik&css=technik">Standard Stream (Tec)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=technik-mobile&css=technik">Mobile Stream (Tec)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=technik">Ohne Farbe</a> <br>
 </div>
+
 
 <div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
 <div style="background-color: #f55c2e; width:300px; color:#fff;">
-		<center><h2 class="genre-header mix">Kultur Player</h2></center>
+	<center><h2 class="genre-header mix">Kultur Player</h2></center>
 </div>
-<center><a style="color:#000" href="./standalone.php?css=kultur">Zum Player</a></center>
+<a style="color:#000;" href="./standalone.php?stream=kultur&css=kultur">Standard Stream (Kul)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=kultur-mobile&css=kultur">Mobile Stream (Kul)</a> <br>
+<a style="color:#000;" href="./standalone.php?stream=kultur">Ohne Farbe</a> <br>
 </div>
 </center>
 <br>
 <br>
-
 <?php
 
 ############################################# //Start - Audio #############################################
@@ -153,7 +194,7 @@ echo '</audio>';
 echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
 echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
-echo "title: 'Relive Radio', \n";
+echo "title: 'Relive Radio ".$names. "', \n";
 echo "permalink: 'http://reliveradio.de', \n";
 echo "subtitle: 'Dein Podcast Radio', \n";
 
@@ -181,14 +222,31 @@ echo "</script>\n";
 ?>
 </p>
 
-<center><a style="color:#000" href="./standalone.php">Standard Player (Black)</a></center>
+<br>
 
-<h2>Eigene Farbe festlegen</h2>
-Gebe hier ein Farbcode ein: (ohne#!) <b>Beispiel:<b> <span style="color:ff00aa;">ff00aa</span>
-<form name="einfaärben" action="./standalone.php?color=" method="get" enctype="text/html">
+<p>
+<center>
+<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
+<div style="background-color: #000; width:300px; color:#fff;">
+	<h2 class="genre-header ">Player Standards (Black)</h2>
+</div>
+Mix: <a style="color:#000" href="./standalone.php?stream=mix">Standard</a> | <a style="color:#000" href="./standalone.php?stream=mix-mobile">Mobile</a><br>
+Technik: <a style="color:#000" href="./standalone.php?stream=technik">Standard</a> | <a style="color:#000" href="./standalone.php?stream=technik-mobile">Mobile</a><br>
+Kultur: <a style="color:#000" href="./standalone.php?stream=kultur">Standard</a> | <a style="color:#000" href="./standalone.php?stream=kultur-mobile">Mobile</a>
+</div>
+
+
+<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
+<div style="width:300px;">
+	<h2 class="genre-header" style="border:1px solid #aaa;">Eigene Farbe festlegen</h2>
+</div>
+Gebe hier ein Farbcode ein: (ohne # !) <br>
+<form name="einfarben" action="./standalone.php?stream=mix&color=" method="get" enctype="text/html">
 <input type="text" name="color" id="color" value="" size="20" maxlength="50" />
 <input type="Submit" name="" value="Farbe ändern" />
 </form>
-
+</div>
+</center>
+</p>
 </body>
 </html>
