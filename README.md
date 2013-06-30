@@ -36,12 +36,12 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 <i>mix-mobile, technik-mobile, kultur-mobile</i>die RPStA API angesprochen werden: </b><br>
 Das einbinden des Streams erfolgt über: <code>standalone.php?css=STREAM</code>
 <ul>
-<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=mix"><code>standalone-live.php?stream=mix</code></a></li>
-<li>Mix Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=mix-mobile"><code>standalone-live.php?stream=mix-mobile</code></a></li>
-<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik"><code>standalone-live.php?stream=technik</code></a></li>
-<li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=technik-mobile"><code>standalone-live.php?stream=technik-mobile</code></a></li>
-<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur"><code>standalone-live.php?stream=kultur</code></a></li>
-<li>Kultur Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream=kultur-mobile"><code>standalone-live.php?stream=kultur-mobile</code></a></li>
+<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=mix"><code>standalone.php?stream=mix</code></a></li>
+<li>Mix Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=mix-mobile"><code>standalone.php?stream=mix-mobile</code></a></li>
+<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=technik"><code>standalone.php?stream=technik</code></a></li>
+<li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=technik-mobile"><code>standalone.php?stream=technik-mobile</code></a></li>
+<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=kultur"><code>standalone.php?stream=kultur</code></a></li>
+<li>Kultur Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=kultur-mobile"><code>standalone.php?stream=kultur-mobile</code></a></li>
 </ul>
 <pre>/**
 * @API: PRStA 
