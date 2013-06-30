@@ -181,12 +181,12 @@ DAMAGE.
  * ==========================================================
  */</pre>
 
-Name: ReliveRadio Livestream Webplayer  <br>
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
 URI: http://podlove.org/podlove-web-player/  <br>
 Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
 
 Version: 1.5.1  <br>
-Author: Michael McCouman jr.  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
 Author URI: http://labs.wikibyte.org/  <br>
 License: BSD 2-Clause License  <br>
 License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
@@ -200,12 +200,12 @@ License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
  * ==========================================================
  */</pre>
 
-Name: ReliveRadio Livestream Webplayer  <br>
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
 URI: http://podlove.org/podlove-web-player/  <br>
 Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.<br>
 
 Version: 2.0.1  <br>
-Author: Michael McCouman jr.  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
 Author URI: http://labs.wikibyte.org/  <br>
 License: BSD 2-Clause License  <br>
 License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
