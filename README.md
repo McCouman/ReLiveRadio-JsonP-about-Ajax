@@ -106,10 +106,27 @@ Zum einfügen den Relive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 * @version: 0.1.2 chapter api
 */</pre>
 
+
 <h2>RWIS: Relive in Wordpress einbinden:</h2>
 Zum Einbinden des Relive Webplayers in Wordpress, kann der RWS Shortcode genutzt werden. 
+
+<h3>Wordpress Widget</h3>
 <pre>/**
-* @Shortcode: RWIS
+* @Widget: RWIW - Relive Webplayer Iframe Widget
+* @info: Widget zum Einbinden des Relive Mini WebPlayers in die Wordpress Sidebar
+* @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
+* @version: 0.0.1 iframe widget
+*/</pre>
+
+<h5>Plugin Download</h5>
+<img src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen1.png">
+
+Um Relive als Player in die Sidbare einzubinden, kann das folgendes PlugIn kostenlos heruntergeladen werden:<br>
+<a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget.zip">Download</a>
+
+<h3>Wordpress Shortcode</h3>
+<pre>/**
+* @Shortcode: RWIS - Relive Webplayer Iframe Shortcode
 * @info: Shortcode zum Einbinden des Relive WebPlayers in eine Wordpress Seite
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
 * @version: 1.5 iframe shortcode
@@ -135,6 +152,8 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
   <li>height="560" //höhe</li>
   <li>width="100%" //breite</li>
  </ul>
+
+
 
 <h2>Lizenzen</h2>
 <pre>/*
@@ -176,7 +195,7 @@ DAMAGE.
 <pre>/*
  * ==========================================================
  * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
- * Licensed under The BSD 2-Clause License
+ * Licensed under The BSD 2-Clause License (Wordpress)
  * http://opensource.org/licenses/BSD-2-Clause
  * ==========================================================
  */</pre>
@@ -186,6 +205,25 @@ URI: http://podlove.org/podlove-web-player/  <br>
 Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
 
 Version: 1.5.1  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
+
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Miniplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License (Wordpress Widget)
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
+
+Version: 0.0.1  <br>
 Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
 Author URI: http://labs.wikibyte.org/  <br>
 License: BSD 2-Clause License  <br>
