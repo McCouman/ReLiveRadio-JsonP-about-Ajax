@@ -119,7 +119,7 @@ Zum Einbinden des Relive Webplayers in Wordpress, kann der RWS Shortcode genutzt
 */</pre>
 
 <h5>Plugin Download</h5>
-<img src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen1.png">
+<img src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget/screen-widget.png">
 
 Um Relive als Player in die Sidbare einzubinden, kann das folgendes PlugIn kostenlos heruntergeladen werden:<br>
 <a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget.zip">Download</a>
