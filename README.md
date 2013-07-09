@@ -28,7 +28,7 @@ im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen au
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
 *        auslesen der ReLive-Json List, Ajax Callbacks über JsonP, Einbau der RPSA & RPCA APIs
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 0.1.0 - 2.0rc RSWP
+* @version: 0.1.0 - 2.1.2rc RSWP
 */</pre>
 
 <h3>RPStA: Relive Player Stream API</h3>
@@ -103,7 +103,7 @@ Zum einfügen den Relive Sendeplanes in den Podlove WebPlayer Shortcodes in Word
 * @API: RCA
 * @info: Dynamische Chapter.txt über Json durch <a href="https://github.com/i42n/reliveradio-sendeplan-rails/">reliveradio-sendeplan-rails</a>
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 0.1.2 chapter api
+* @version: 1.1.2 chapter api
 */</pre>
 
 
@@ -156,6 +156,81 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
 
 
 <h2>Lizenzen</h2>
+<h3>Relive Standalone Web Player for iframe integration & APIs</h3>
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.<br>
+
+Version: 2.1.2  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
+Copyright (c) 2013, Wikibyte.org - All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, 
+are permitted provided that the following conditions are met:
+Redistributions of source code must retain the above copyright notice, this list of conditions 
+and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, 
+this list of conditions and the following disclaimer in the documentation and/or other materials provided 
+with the distribution.<br>
+
+<h3>Wordpress Relive Web Player Shortcode</h3>
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License (Wordpress)
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
+
+Version: 1.5.1  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
+<h3>Wordpress Relive Web Player Widget</h3>
+<pre>/*
+ * ==========================================================
+ * ReliveRadio Livestream Miniplayer (RRJA WebPlayer Project)
+ * Licensed under The BSD 2-Clause License (Wordpress Widget)
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ==========================================================
+ */</pre>
+
+Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
+URI: http://podlove.org/podlove-web-player/  <br>
+Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
+
+Version: 1.0.5  <br>
+Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
+Author URI: http://labs.wikibyte.org/  <br>
+License: BSD 2-Clause License  <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGE. <br>
+
+<h3>Podlove Web Payer Lizenz</h3>
 <pre>/*
  * ===========================================
  * Podlove Web Player v2.1.0
@@ -176,81 +251,6 @@ License URI: http://opensource.org/licenses/BSD-2-Clause <br>
 Copyright (c) 2013, Podlove.org - All rights reserved. <br>
 
 Redistribution and use in source and binary forms, with or without modification,  <br>
-are permitted provided that the following conditions are met:
-
-Redistributions of source code must retain the above copyright notice, this list of conditions 
-and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, 
-this list of conditions and the following disclaimer in the documentation and/or other materials provided 
-with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
-INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
-OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
-DAMAGE.
-
-
-<pre>/*
- * ==========================================================
- * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
- * Licensed under The BSD 2-Clause License (Wordpress)
- * http://opensource.org/licenses/BSD-2-Clause
- * ==========================================================
- */</pre>
-
-Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
-URI: http://podlove.org/podlove-web-player/  <br>
-Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
-
-Version: 1.5.1  <br>
-Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
-Author URI: http://labs.wikibyte.org/  <br>
-License: BSD 2-Clause License  <br>
-License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
-
-
-<pre>/*
- * ==========================================================
- * ReliveRadio Livestream Miniplayer (RRJA WebPlayer Project)
- * Licensed under The BSD 2-Clause License (Wordpress Widget)
- * http://opensource.org/licenses/BSD-2-Clause
- * ==========================================================
- */</pre>
-
-Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
-URI: http://podlove.org/podlove-web-player/  <br>
-Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
-
-Version: 1.0.5  <br>
-Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
-Author URI: http://labs.wikibyte.org/  <br>
-License: BSD 2-Clause License  <br>
-License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
-
-
-<pre>/*
- * ==========================================================
- * ReliveRadio Livestream Webplayer (RRJA WebPlayer Project)
- * Licensed under The BSD 2-Clause License
- * http://opensource.org/licenses/BSD-2-Clause
- * ==========================================================
- */</pre>
-
-Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br>
-URI: http://podlove.org/podlove-web-player/  <br>
-Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.<br>
-
-Version: 2.0.1  <br>
-Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
-Author URI: http://labs.wikibyte.org/  <br>
-License: BSD 2-Clause License  <br>
-License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
-
-Copyright (c) 2013, Wikibyte.org - All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, 
 are permitted provided that the following conditions are met:
 
 Redistributions of source code must retain the above copyright notice, this list of conditions 
