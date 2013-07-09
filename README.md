@@ -115,7 +115,7 @@ Zum Einbinden des Relive Webplayers in Wordpress, kann der RWS Shortcode genutzt
 * @Widget: RWIW - Relive Webplayer Iframe Widget
 * @info: Widget zum Einbinden des Relive Mini WebPlayers in die Wordpress Sidebar
 * @developer: <a href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 0.0.1 iframe widget
+* @version: 1.0.5 iframe widget
 */</pre>
 
 <h5>Plugin Download</h5>
@@ -223,7 +223,7 @@ Name: <a href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer  <br
 URI: http://podlove.org/podlove-web-player/  <br>
 Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project.  <br>
 
-Version: 0.0.1  <br>
+Version: 1.0.5  <br>
 Author: <a href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
 Author URI: http://labs.wikibyte.org/  <br>
 License: BSD 2-Clause License  <br>
