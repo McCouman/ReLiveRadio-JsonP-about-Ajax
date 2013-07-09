@@ -49,11 +49,13 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		if ($stream == 'mix'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
 			$names = "Mix";
+			$urilink = "http://reliveradio.de/stream/mix";
 			
 		}
 		elseif ($stream == 'mix-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3"; 
 			$names = "Mix";
+			$urilink = "http://reliveradio.de/stream/mix";
 			
 		}			 
 		
@@ -61,11 +63,13 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		elseif ($stream == 'technik'){ 
 			$uristream = "http://stream.reliveradio.de:8000/technik.mp3";
 			$names = "Technik";
+			$urilink = "http://reliveradio.de/stream/technik";
 			
 		}			 
 		elseif ($stream == 'technik-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/technikmobile.mp3"; 
 			$names = "Technik";
+			$urilink = "http://reliveradio.de/stream/technik";
 			
 		}			 
 		
@@ -73,11 +77,13 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		elseif ($stream == 'kultur'){ 
 			$uristream = "http://stream.reliveradio.de:8000/kultur.mp3"; 
 			$names = "Kultur";
+			$urilink = "http://reliveradio.de/stream/kultur";
 			
 		}			 
 		elseif ($stream == 'kultur-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/kulturmobile.mp3";
 			$names = "Kultur";
+			$urilink = "http://reliveradio.de/stream/kultur";
 			
 		}			 
 		
@@ -85,12 +91,14 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		else { 
 			$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
 			$names = "Mix";
+			$urilink = "http://reliveradio.de/stream/mix";
 		}
 
 } else {
 ## No Stream API => Standard
 	$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
 	$names = "Mix";
+	$urilink = "http://reliveradio.de/stream/mix";
 }
 ## Stream API ###############################################################################################################
 
@@ -130,8 +138,8 @@ echo '</audio>';
 ####################################### //Start - Podlove Web Player ######################################
 echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
-echo "title: 'ReliveRadio - ".$names. "', \n";
-echo "permalink: 'http://reliveradio.de', \n";
+echo "title: 'ReliveRadio <br>".$names. "', \n";
+echo "permalink: '".$urilink."', \n";
 echo "duration: '24:00:00',  \n";
 echo "startVolume: 0.8, \n";
 echo "width: 'auto', \n";
