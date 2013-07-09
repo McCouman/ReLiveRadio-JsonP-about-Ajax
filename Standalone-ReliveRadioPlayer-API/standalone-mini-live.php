@@ -24,14 +24,18 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 	$css = $_GET["css"];
 		
 		//Vergelich
-		if ($css == 'mix'){ $mix_color = $_GET["css"]; } 					 //mix
-		elseif ($css == 'technik'){ $technik_color = $_GET["css"]; } 		 //technik
-		elseif ($css == 'kultur'){ $kultur_color = $_GET["css"]; } 			 //kultur
+		if ($css == 'mix')					{ $style_color 	= 'mix'; }  	//mix
+		elseif ($css == 'mix-mobile')		{ $style_color 	= 'mix'; } 	 	//mix-mobile
+		elseif ($css == 'technik')			{ $style_color 	= 'technik'; } 	//technik
+		elseif ($css == 'technik-mobile')	{ $style_color 	= 'technik'; } 	//technik-mobile	
+		elseif ($css == 'kultur')			{ $style_color 	= 'kultur'; }   //kultur
+		elseif ($css == 'kultur-mobile')	{ $style_color 	= 'kultur'; } 	//kultur-mobile
+
 			//Error
 			else {	echo '<!-- No CSS API!-->'; }
 
 		//Ausgabe Relive css: 
-		echo '<link href="http://cm.wikibyte.org/testcodes/neu-chapters/css/'.$mix_color .''. $technik_color .''. $kultur_color.'.css" rel="stylesheet" media="screen" type="text/css" />';
+		echo '<link href="http://cm.wikibyte.org/testcodes/neu-chapters/css/'.$style_color.'.css" rel="stylesheet" media="screen" type="text/css" />';
 
 } else {
 	//Keine Eingaben
@@ -54,7 +58,7 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		}
 		elseif ($stream == 'mix-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3"; 
-			$names = "Mix";
+			$names = "Mix - Mobile";
 			$urilink = "http://reliveradio.de/stream/mix";
 			
 		}			 
@@ -68,7 +72,7 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		}			 
 		elseif ($stream == 'technik-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/technikmobile.mp3"; 
-			$names = "Technik";
+			$names = "Technik - Mobile";
 			$urilink = "http://reliveradio.de/stream/technik";
 			
 		}			 
@@ -82,7 +86,7 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		}			 
 		elseif ($stream == 'kultur-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/kulturmobile.mp3";
-			$names = "Kultur";
+			$names = "Kultur - Mobile";
 			$urilink = "http://reliveradio.de/stream/kultur";
 			
 		}			 

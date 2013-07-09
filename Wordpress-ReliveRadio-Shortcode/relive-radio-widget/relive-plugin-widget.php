@@ -3,7 +3,7 @@
 Plugin Name:  Relive Radio Widget Plugin
 Description:  Ermöglicht das Einbinden des ReliveRadio Miniplayers über die Widgets in die Sidebar
 Plugin URI:   http://labs.wikibyte.org
-Version:      0.0.1
+Version:      1.1.2
 Author:       Michael McCouman jr.
 Author URI:   http://wikibyte.org/
 Props:        Michael McCouman jr.
@@ -85,7 +85,7 @@ class Relive_Radio_Widget extends WP_Widget {
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'New title', 'text_domain' );
+			$title = __( 'Relive Radio', 'text_domain' );
 		}
 		
 		//stream:
@@ -113,11 +113,57 @@ class Relive_Radio_Widget extends WP_Widget {
 		type="text" 
 		value="<?php echo esc_attr( $title ); ?>" />
 		
+		<br>
+		<br>
+		
 		<label for="<?php echo $this->get_field_name( 'stream' ); ?>">Stream:</label> 
-		<input class="widefat" 
-		id="<?php echo $this->get_field_id( 'stream' ); ?>" 
-		name="<?php echo $this->get_field_name( 'stream' ); ?>" 
-		type="text" value="<?php echo esc_attr( $stream ); ?>" />
+		<div class="inside">
+			<select id="<?php echo $this->get_field_id( 'stream' ); ?>" name="<?php echo $this->get_field_name( 'stream' ); ?>">
+		<?php
+		
+		//bedeutet: (Überprüfung innerhalb der Klammer) ? (wenn true) : (wenn falsch); 
+		echo '<option'; echo (esc_attr( $stream ) == '') ? ' 
+					value="" selected="selected"> -- Bitte Stream aussuchen -- </option>' : ' 
+					value=""> -- Bitte Stream aussuchen -- </option>'; 
+	##---------
+		//Mix
+		echo '<option'; echo (esc_attr( $stream ) == 'mix') ? ' 
+			value="mix" selected="selected">  Mix </option>' : ' 
+			value="mix"> Mix </option>'; 
+
+		//Mix-Mobile
+		echo '<option'; echo (esc_attr( $stream ) == 'mix-mobile') ? ' 
+			value="mix-mobile" selected="selected">  Mix Mobile </option>' : ' 
+			value="mix-mobile"> Mix Mobile</option>';
+	##---------			
+		//Technik
+		echo '<option'; echo (esc_attr( $stream ) == 'technik') ? ' 
+			value="technik" selected="selected">  Technik </option>' : ' 
+			value="technik"> Technik </option>'; 		
+			 	
+		//Technik-Mobile
+		echo '<option'; echo (esc_attr( $stream ) == 'technik-mobile') ? ' 
+			value="technik-mobile" selected="selected"> Technik Mobile </option>' : ' 
+			value="technik-mobile"> Technik Mobile </option>';
+	##---------	
+		//Kultur
+		echo '<option'; echo (esc_attr( $stream ) == 'kultur') ? ' 
+			value="kultur" selected="selected">  Kultur </option>' : ' 
+			value="kultur"> Kultur </option>'; 
+			
+		//Kultur-Mobile
+		echo '<option'; echo (esc_attr( $stream ) == 'kultur-mobile') ? ' 
+			value="kultur-mobile" selected="selected"> Kultur Mobile </option>' : ' 
+			value="kultur-mobile"> Kultur Mobile </option>'; 
+	 		
+	 		?>			
+			</select>
+		</div>
+		
+		<br>
+		
+		<p style="font-size:12px;">Suche bitte einen Stream aus, den du in der Sidebar einbinden möchtest!<p/>
+
 
 <?php 
 /**
