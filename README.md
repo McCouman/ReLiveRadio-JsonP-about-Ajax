@@ -20,7 +20,13 @@ in der der Player spielt nicht von Hand aktualisiert werden und der Stream bleib
 Die Ausgabe der gerade laufenden Podcastings werden automatisch mit Coverbild, Podcastname, Titel und Informationen der Sendung
 im Webpayer angezeigt. Ist eine Sendung vorbei, so werden alles Informationen automatisch, Live aktualisiert. 
 
-
+<h4>Unterstützen</h4>
+<a href="http://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">
+<img src="https://a248.e.akamai.net/camo.github.com/739a757846f69c1cc10163619eec008e871b591b/687474703a2f2f6170692e666c617474722e636f6d2f627574746f6e2f666c617474722d62616467652d6c617267652e706e67" 
+alt="Flattr This" title="Flattr This" style="max-width:100%;"> ReliveRadio</a> <br />
+<a href="https://flattr.com/profile/mccouman">
+<img src="https://a248.e.akamai.net/camo.github.com/739a757846f69c1cc10163619eec008e871b591b/687474703a2f2f6170692e666c617474722e636f6d2f627574746f6e2f666c617474722d62616467652d6c617267652e706e67" 
+alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman jr.</a> 
 <h2>RSWP: Der Standalone WebPlayer</h2>
 <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen2.png"></a>
 <pre>/**
@@ -265,3 +271,12 @@ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE 
 OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
 DAMAGE.
+
+
+<h4>Unterstützen</h4>
+<a href="https://flattr.com/profile/mccouman">
+<img src="https://a248.e.akamai.net/camo.github.com/739a757846f69c1cc10163619eec008e871b591b/687474703a2f2f6170692e666c617474722e636f6d2f627574746f6e2f666c617474722d62616467652d6c617267652e706e67" 
+alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman jr.</a> <br>
+<a href="http://flattr.com/thing/973782/ReliveRadio-de-Podcasts-rund-um-die-Uhr">
+<img src="https://a248.e.akamai.net/camo.github.com/739a757846f69c1cc10163619eec008e871b591b/687474703a2f2f6170692e666c617474722e636f6d2f627574746f6e2f666c617474722d62616467652d6c617267652e706e67" 
+alt="Flattr This" title="Flattr This" style="max-width:100%;"> ReliveRadio</a>
