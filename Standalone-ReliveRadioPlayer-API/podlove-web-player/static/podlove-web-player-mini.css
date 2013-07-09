@@ -1111,7 +1111,7 @@ div.podlovewebplayer_meta{background: #000;}
 clear: none;
 color: #fff!important;
 background: transparent !important;
-padding-top: 25px;
+padding-top: 20px;
 font-size: 16px;
 margin-bottom: -20px!important;
 text-align: center;
@@ -1635,7 +1635,7 @@ and (max-width : 500px) {
 		-moz-border-radius-topright: 0px;
 		border-top-left-radius: 0px;
 		border-top-right-radius: 0px;
-
+margin-top: -12px;
 		-webkit-border-bottom-left-radius: 0px;
 		-webkit-border-bottom-right-radius: 0px;
 		-moz-border-radius-bottomleft: 0px;

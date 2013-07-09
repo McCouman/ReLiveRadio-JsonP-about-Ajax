@@ -1004,7 +1004,7 @@ function(){f.ajax({dataType:"html",url:d,success:function(e){c.find(".mejs-postr
 				if (params.title !== undefined) {
 					if (params.permalink !== undefined) {
 						wrapper.find('.podlovewebplayer_meta').append(
-							'<h3 class="episodetitle"><a href="' + params.permalink + '">' + params.title + '</a></h3>');
+							'<h3 class="episodetitle"><a target="_blank" href="' + params.permalink + '">' + params.title + '</a></h3>');
 					} else {
 						wrapper.find('.podlovewebplayer_meta').append(
 							'<h3 class="episodetitle">' + params.title + '</h3>');
