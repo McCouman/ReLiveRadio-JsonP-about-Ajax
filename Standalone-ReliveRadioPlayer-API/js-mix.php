@@ -1,4 +1,18 @@
 <?php
+		
+	if (isset($_GET["anzahl"]) && !empty($_GET["anzahl"])) {
+	
+		$anzahl = $_GET["anzahl"];
+	
+	} else {
+		
+		$anzahl = 6;
+	
+	}
+		
+		
+		
+		
 		$aaa = 60999;
 		$zu = "";
 ?>
@@ -25,7 +39,7 @@ setInterval( function jsonp(){
 
   // Anlegen und Einfügen des neuen Skripts
   var now = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+now.getTime()+"&callback=callback";
+  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-mix.php?time="+now.getTime()+"&anzahl=<?php  echo $anzahl;     ?>&callback=callback";
   var script = document.createElement("script");
   script.setAttribute("src", url);
   script.setAttribute("type", "text/javascript");
