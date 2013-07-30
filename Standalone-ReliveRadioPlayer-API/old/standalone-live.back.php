@@ -7,18 +7,6 @@
 	<script src="./podlove-web-player/libs/html5shiv.js"></script>
 	<script src="./podlove-web-player/libs/jquery-1.9.1.min.js"></script>
 	<script src="./podlove-web-player/static/podlove-web-player.js"></script>
-
-<style>
-.podlovewebplayer_meta .subtitle b{ 
-	font-weight: bold;
-	font-size: 13px;
-}
-.podlovewebplayer_meta .subtitle a{ 
-	font-size: 12px;
-	text-decoration: underline!important;
-}
-</style>
-
 <?php
 
 
@@ -193,14 +181,10 @@ echo '</audio>';
 ####################################### //Start - Podlove Web Player ######################################
 echo "<script>\n";			
 echo "$('#testplayer').podlovewebplayer({ \n";
-
-//Logo
-echo "poster: 'http://reliveradio.de/assets/logo-2451789f6d07cfdd6a3a7a242606b4a5.png', \n";
-#echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
-
+echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
 echo "title: 'Relive Radio ".$names. "', \n";
 echo "permalink: '".$urilink."', \n";
-echo "subtitle: '<b>Dein Podcast Radio:</b> Das <a style=\"color:#fff;\" href=\"http://reliveradio.de\">ReliveRadio</a> sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen...', \n";
+echo "subtitle: 'Dein Podcast Radio', \n";
 
 //startepisode (läuft gerade)
 echo "chapters: [ \n";
@@ -212,7 +196,7 @@ for($i = 0; $i < $anzahlouts; ++$i) {
 } 
 
 echo "], \n";					
-#echo "summary: '<p id=\"pinfos\">Das <a href=\"http://reliveradio.de\">ReliveRadio</a> sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. <br><br><b>Motivation</b><br><br>Zum einen, möchten wir mit dem ReliveRadio Menschen erreichen, die sich erst wenig oder gar nicht mit dem Format Podcast beschäftigt haben und so eine niederschwellige Einstiegsmöglichkeit bieten. Zum anderen soll das ReliveRadio aber auch Hörern die Gelegenheit geben, neue Podcastformate kennen zu lernen. Ansonsten möchten wir dazu beitragen, dass Podcasts auch mit geringer Bandbreite jederzeit auf dem Smartphone, dem Smart-TV, im Auto oder auf anderen Geräten gehört werden können.</p>', \n";
+echo "summary: '<p id=\"pinfos\">Das <a href=\"http://reliveradio.de\">ReliveRadio</a> sendet rund um die Uhr Podcastformate aus ganz verschiedenen Themenbereichen. <br><br><b>Motivation</b><br><br>Zum einen, möchten wir mit dem ReliveRadio Menschen erreichen, die sich erst wenig oder gar nicht mit dem Format Podcast beschäftigt haben und so eine niederschwellige Einstiegsmöglichkeit bieten. Zum anderen soll das ReliveRadio aber auch Hörern die Gelegenheit geben, neue Podcastformate kennen zu lernen. Ansonsten möchten wir dazu beitragen, dass Podcasts auch mit geringer Bandbreite jederzeit auf dem Smartphone, dem Smart-TV, im Auto oder auf anderen Geräten gehört werden können.</p>', \n";
 echo "duration: '24:00:00',  \n";
 echo "alwaysShowHours: true, \n";
 echo "startVolume: 0.8, \n";

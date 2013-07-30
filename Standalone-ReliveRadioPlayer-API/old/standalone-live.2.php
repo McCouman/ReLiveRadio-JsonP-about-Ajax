@@ -9,7 +9,6 @@
 	<script src="./podlove-web-player/static/podlove-web-player.js"></script>
 <?php
 
-
 ## Relive - CSS API #######################################################################################################
 /**
 *	Relive - Color API
@@ -31,7 +30,8 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 		elseif ($css == 'technik-mobile')	{ $style_color 	= 'technik'; } 	//technik-mobile	
 		elseif ($css == 'kultur')			{ $style_color 	= 'kultur'; }   //kultur
 		elseif ($css == 'kultur-mobile')	{ $style_color 	= 'kultur'; } 	//kultur-mobile
-
+			
+			
 			//Error
 			else {	echo '<!-- No CSS API!-->'; }
 
@@ -49,20 +49,6 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 	
 	//Variable übergabe 
 	$stream = $_GET["stream"];
-	
-	
-	
-	
-	#$anzahl = 6;
-	if (isset($_GET["liste"]) && !empty($_GET["liste"])) {
-	
-		$anzahl = $_GET["liste"];
-	
-	} else {
-		
-		$anzahl = 6;
-	
-	}
 		
 		## Mix Stream
 		if ($stream == 'mix'){ 
@@ -70,14 +56,14 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
 			$names = "Mix";
 			$urilink = "http://reliveradio.de/stream/mix";
-			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php?anzahl='.$anzahl.'"></script>'; 
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php"></script>'; 
 		}
 		elseif ($stream == 'mix-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3"; 
 			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
 			$names = "Mix";
 			$urilink = "http://reliveradio.de/stream/mix";
-			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php?anzahl='.$anzahl.'"></script>'; 
+			echo '<script src="http://cm.wikibyte.org/testcodes/neu-chapters/js-mix.php"></script>'; 
 		}			 
 		
 		## Technik Stream				 
@@ -167,14 +153,6 @@ if (isset($_GET["color"]) && !empty($_GET["color"])) {
 	
 	//Serverzeit:
 	$agleich = strtotime($server);
-	
-	
-	## Ausgabe der Lise #####################
-	//$anzahl = 6;
-	$anzahlouts = ($anzahl -1);
-	
-
-	
 ?>
 </head>
 <body>
@@ -200,7 +178,7 @@ echo "chapters: [ \n";
   echo " {'start':'00:00:00.000','title':'". $suche["live_episode"]["db"]["name"]. " - ". $suche["live_episode"]["track_title"] ."', 'image':'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg'} \n";
 
 //weitere Episoden
-for($i = 0; $i < $anzahlouts; ++$i) { 
+for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) { 
   echo ",{'start':'". date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][$i]["starts"], 11,-6))-strtotime($server))) ."','title':'". preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["db"]["name"]) ." - ". preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["track_title"]). "', 'image':'http://static.reliveradio.de/logos/".$suche["upcoming_episodes"][$i]["db"]["slugintern"]. ".jpg'} \n"; 
 } 
 
