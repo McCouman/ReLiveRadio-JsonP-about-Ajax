@@ -200,6 +200,38 @@ if (isset($_GET["color"]) && !empty($_GET["color"])) {
 </head>
 <body>
 <p>
+
+
+<center>
+<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
+<div style="background-color: #86ba00; width:300px; color:#fff;">
+  <center><h2 class="genre-header mix">Mix Player</h2></center>
+</div>
+<a style="color:#000;" href="./test.php?stream=mix&css=mix">Standard Stream (Mix)</a> <br>
+<a style="color:#000;" href="./test.php?stream=mix-mobile&css=mix">Mobile Stream (Mix)</a> <br>
+<a style="color:#000;" href="./test.php?stream=mix">Ohne Farbe</a> <br>
+</div>
+
+
+<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
+<div style="background-color: #49AEC0; width:300px; color:#fff;">
+  <center><h2 class="genre-header mix">Technik Player</h2></center>
+</div>
+<a style="color:#000;" href="./test.php?stream=technik&css=technik">Standard Stream (Tec)</a> <br>
+<a style="color:#000;" href="./test.php?stream=technik-mobile&css=technik">Mobile Stream (Tec)</a> <br>
+<a style="color:#000;" href="./test.php?stream=technik">Ohne Farbe</a> <br>
+</div>
+
+
+<div style="float:left; width:33%; margin-top: -32px; padding-bottom: 30px;">
+<div style="background-color: #f55c2e; width:300px; color:#fff;">
+  <center><h2 class="genre-header mix">Kultur Player</h2></center>
+</div>
+<a style="color:#000;" href="./test.php?stream=kultur&css=kultur">Standard Stream (Kul)</a> <br>
+<a style="color:#000;" href="./test.php?stream=kultur-mobile&css=kultur">Mobile Stream (Kul)</a> <br>
+<a style="color:#000;" href="./test.php?stream=kultur">Ohne Farbe</a> <br>
+</div>
+</center>
 <?php
 
 ############################################# //Start - Audio #############################################
@@ -251,9 +283,9 @@ echo "</script>\n";
 <div style="background-color: #000; width:300px; color:#fff;">
 	<h2 class="genre-header ">Player Standards (Black)</h2>
 </div>
-Mix: <a style="color:#000" href="./standalone.php?stream=mix">Standard</a> | <a style="color:#000" href="./standalone.php?stream=mix-mobile">Mobile</a><br>
-Technik: <a style="color:#000" href="./standalone.php?stream=technik">Standard</a> | <a style="color:#000" href="./standalone.php?stream=technik-mobile">Mobile</a><br>
-Kultur: <a style="color:#000" href="./standalone.php?stream=kultur">Standard</a> | <a style="color:#000" href="./standalone.php?stream=kultur-mobile">Mobile</a>
+Mix: <a style="color:#000" href="./test.php?stream=mix">Standard</a> | <a style="color:#000" href="./test.php?stream=mix-mobile">Mobile</a><br>
+Technik: <a style="color:#000" href="./test.php?stream=technik">Standard</a> | <a style="color:#000" href="./test.php?stream=technik-mobile">Mobile</a><br>
+Kultur: <a style="color:#000" href="./test.php?stream=kultur">Standard</a> | <a style="color:#000" href="./test.php?stream=kultur-mobile">Mobile</a>
 </div>
 
 
@@ -262,7 +294,7 @@ Kultur: <a style="color:#000" href="./standalone.php?stream=kultur">Standard</a>
 	<h2 class="genre-header" style="border:1px solid #aaa;">Eigene Farbe festlegen</h2>
 </div>
 Gebe hier ein Farbcode ein: (ohne # !) <br>
-<form name="einfarben" action="./standalone.php?stream=mix&color=" method="get" enctype="text/html">
+<form name="einfarben" action="./test.php?stream=mix&color=" method="get" enctype="text/html">
 <input type="text" name="color" id="color" value="" size="20" maxlength="50" />
 <input type="Submit" name="" value="Farbe ändern" />
 </form>
@@ -273,7 +305,7 @@ Gebe hier ein Farbcode ein: (ohne # !) <br>
 	<h2 class="genre-header ">Anzahl der Liste </h2>
 </div>
 Gebe hier ein Zahl: (Standardwert => 6) <br>
-<form name="anzahl" action="./standalone.php?liste=" method="get" enctype="text/html">
+<form name="anzahl" action="./test.php?liste=" method="get" enctype="text/html">
 <input type="text" name="liste" id="anzahl" value="" size="20" maxlength="50" />
 <input type="Submit" name="" value="Liste ausgeben" />
 </form>
