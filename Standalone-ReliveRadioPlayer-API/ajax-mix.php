@@ -7,12 +7,11 @@
 *	@Mail: Support@wikibyte.org
 * 	@Version: 0.1.3
 *
-*/
-
+*/	
 	//ReRadio Mix
 	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
 
-	//DeCode Json out:
+	//DeCode Json out
 	$suche = json_decode($jsonfile,TRUE);
 	
 	global $suche;
@@ -76,11 +75,13 @@ if (isset($_GET["relivetitlenamedata"]) && !empty($_GET["relivetitlenamedata"]))
 
 	//Header für ein JavaScript
   	header("Content-Type: application/javascript");
-
-
+	
+	//Include Vars = $dec_max_limet für Textanzahl
+	include ("install/install.php");
+	
 	//Description
 	$str = preg_replace("/\s+/", " " ,$suche["live_episode"]["db"]["description"]);
-	$maxlen = 30; //Anzahl der wörter ausgeben
+	$maxlen = $dec_max_limet; //Anzahl der wörter ausgeben
 
 	$words = preg_split('/\s/', $str);
 	$short = implode(array_slice($words, 0, $maxlen), ' ');
@@ -90,20 +91,4 @@ if (isset($_GET["relivetitlenamedata"]) && !empty($_GET["relivetitlenamedata"]))
 		echo '<b>' .$suche["live_episode"]["db"]["name"]. ':</b> '.$short.'';
 	echo "')";
 }
-
-######################################### Descs Callback
-/*
-// auf Callback-Parameter prüfen
-if (isset($_GET["relivedescdata"]) && !empty($_GET["relivedescdata"])) {
-  $relivedescdata = $_GET["relivedescdata"];
-
-	//Header für ein JavaScript
-  	header("Content-Type: application/javascript");
-
-	echo $relivedescdata. "('";
-		echo '<p id="pinfos">'.$suche["live_episode"]["db"]["description"]. '</p>';
-	echo "')";
-}
-
-*/
 ?>

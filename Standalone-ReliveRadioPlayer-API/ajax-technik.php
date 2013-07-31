@@ -37,35 +37,25 @@
 if (isset($_GET["callback"]) && !empty($_GET["callback"])) {
   $callback = $_GET["callback"];
 
-	//Header für ein JavaScript
-  	header("Content-Type: application/javascript");
+   //Header für ein JavaScript
+   header("Content-Type: application/javascript");
 
-		/** Chapter Marks Callback **/
-		#$datei = file("http://testpreview.reliveradio.de/stream/technique.chapters");
-		#$datei = file("http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/relive.datei");
+   ####### Anzahl API zum Auslesen der Liste
+	if (isset($_GET["anzahl"]) && !empty($_GET["anzahl"])) {
+		$anzahl = $_GET["anzahl"];
+	} else { $anzahl = 6; }
+
+  	$anzahlouts = ($anzahl - 1);
   
+  ########## OUTs //START ############
   	echo $callback. "('";
-  	
 		echo '<tr class="chaptertr active loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>00:00:00</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["live_episode"]["ends"], 11, -6) .'</span></td></tr>';
-		
-		for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) {
-   		#	if ($server < substr($suche["upcoming_episodes"][$i]["starts"], 11, -6)) {	
-			 #echo 'nix da'; 
-		#	} else { 
-
+		for($i = 0; $i < $anzahlouts; ++$i) {
 			echo '<tr class="chaptertr oddchapter loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>'. date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][$i]["starts"], 11,-6))-strtotime($server))) .'</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["upcoming_episodes"][$i]["ends"], 11, -6) .'</span></td></tr>';
-		
-		#	}
 		}
-	
 	echo "')";
+  ########## OUTs //END #############
 }
-
-
-
-
-
-
 
 
 ######################################### Cover Callback
@@ -89,23 +79,20 @@ if (isset($_GET["relivetitlenamedata"]) && !empty($_GET["relivetitlenamedata"]))
 
 	//Header für ein JavaScript
   	header("Content-Type: application/javascript");
+	
+	//Include Vars = $dec_max_limet für Textanzahl
+	include ("install/install.php");
+	
+	//Description
+	$str = preg_replace("/\s+/", " " ,$suche["live_episode"]["db"]["description"]);
+	$maxlen = $dec_max_limet; //Anzahl der wörter ausgeben
 
-	echo $relivetitlenamedata. "('";
-		echo '<b style="font-weight: bold; font-size: 13px;">Gerade läuft: </b>'.$suche["live_episode"]["db"]["name"];
+	$words = preg_split('/\s/', $str);
+	$short = implode(array_slice($words, 0, $maxlen), ' ');
+	if (count($words) > $maxwords) $short .= ' ...';
+
+	echo $relivetitlenamedata. "('";																				
+		echo '<b>' .$suche["live_episode"]["db"]["name"]. ':</b> '.$short.'';
 	echo "')";
 }
-
-######################################### Descs Callback
-// auf Callback-Parameter prüfen
-if (isset($_GET["relivedescdata"]) && !empty($_GET["relivedescdata"])) {
-  $relivedescdata = $_GET["relivedescdata"];
-
-	//Header für ein JavaScript
-  	header("Content-Type: application/javascript");
-
-	echo $relivedescdata. "('";
-		echo '<p id="pinfos">'.$suche["live_episode"]["db"]["description"]. '</p>';
-	echo "')";
-}
-
 ?>

@@ -59,9 +59,7 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 	
 	//Variable übergabe 
 	$stream = $_GET["stream"];
-	
 
-	
 		######### List API #############
 		if (isset($_GET["liste"]) && !empty($_GET["liste"])) { 
 			$anzahl = $_GET["liste"]; 
@@ -69,7 +67,9 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 			//Anzahl, Out
 			global $anzahl;
 			global $anzahlouts;
-			$anzahl = 6;  //standrad Listenanzahl
+			#$anzahl = 6;  //standrad Listenanzahl
+			//$anzahl = 6;  					#standrad Listenanzahl
+			include('install/install.php');
 		}
 		######### List API #############
 		
@@ -137,7 +137,9 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		if (isset($_GET["liste"]) && !empty($_GET["liste"])) { 
 			$anzahl = $_GET["liste"]; 
 		} else {
-			$anzahl = 6;  //standrad Listenanzahl
+			//$anzahl = 6;  					#standrad Listenanzahl
+			include('install/install.php');
+			#$anzahl = 6;  //standrad Listenanzahl
 		}
 	######### List API #############
 	$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
@@ -211,7 +213,7 @@ echo "<script>\n";
 echo "$('#testplayer').podlovewebplayer({ \n";
 
 //Logo
-echo "poster: 'http://reliveradio.de/assets/logo-2451789f6d07cfdd6a3a7a242606b4a5.png', \n";
+echo "poster: './podlove-web-player/img/rr-logo.png', \n";
 #echo "poster: 'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg', \n";
 
 echo "title: 'Relive Radio - ".$names. "', \n";

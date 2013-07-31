@@ -36,37 +36,17 @@
 ######################################### Chapters Callback
 if (isset($_GET["callback"]) && !empty($_GET["callback"])) {
   $callback = $_GET["callback"];
-
+	
 	//Header für ein JavaScript
   	header("Content-Type: application/javascript");
-
-		/** Chapter Marks Callback **/
-		#$datei = file("http://testpreview.reliveradio.de/stream/technique.chapters");
-		#$datei = file("http://cm.wikibyte.org/testcodes/neu-chapters/podlove-web-player/relive.datei");
-  
-  	echo $callback. "('";
   	
+  	echo $callback. "('";
 		echo '<tr class="chaptertr active loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>00:00:00</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["live_episode"]["ends"], 11, -6) .'</span></td></tr>';
-		
-		for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) {
-   		#	if ($server < substr($suche["upcoming_episodes"][$i]["starts"], 11, -6)) {	
-			 #echo 'nix da'; 
-		#	} else { 
-
+		for($i = 0; $i < count($suche["upcoming_episodes"]); ++$i) { 
 			echo '<tr class="chaptertr oddchapter loaded" data-start="0.5" data-end="1.5" data-img="http://static.reliveradio.de/logos/' .$suche["upcoming_episodes"][$i]["db"]["slugintern"]. '.jpg"><td class="starttime"><span>'. date("H:i:s", (strtotime(substr($suche["upcoming_episodes"][$i]["starts"], 11,-6))-strtotime($server))) .'</span></td><td class="chaptername">'.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["db"]["name"]). ' - '.preg_replace("/(')+/","&rsquo;",$suche["upcoming_episodes"][$i]["track_title"]). '</td><td class="timecode"><span>'. substr($suche["upcoming_episodes"][$i]["ends"], 11, -6) .'</span></td></tr>';
-		
-		#	}
 		}
-	
 	echo "')";
 }
-
-
-
-
-
-
-
 
 ######################################### Cover Callback
 // auf Callback-Parameter prüfen
@@ -80,7 +60,6 @@ if (isset($_GET["relivecoverdata"]) && !empty($_GET["relivecoverdata"])) {
 		echo '<img class="coverimg" src="http://static.reliveradio.de/logos/'.$suche["live_episode"]["db"]["slugintern"]. '.jpg" data-img="http://static.reliveradio.de/logos/'.$suche["live_episode"]["db"]["slugintern"]. '.jpg" alt="">';
 	echo "')";
 }
-
 
 ######################################### Title Callback
 // auf Callback-Parameter prüfen
@@ -107,5 +86,4 @@ if (isset($_GET["relivedescdata"]) && !empty($_GET["relivedescdata"])) {
 		echo '<p id="pinfos">'.$suche["live_episode"]["db"]["description"]. '</p>';
 	echo "')";
 }
-
 ?>
