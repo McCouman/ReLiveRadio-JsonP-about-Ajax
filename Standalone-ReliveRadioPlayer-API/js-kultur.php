@@ -1,11 +1,15 @@
 <?php
-		$aaa = 60999;
-		$zu = "";
+#####################################################################################################################
+	
+	//list API
+	if (isset($_GET["anzahl"]) && !empty($_GET["anzahl"])) { $liste = $_GET["anzahl"]; }
+	
+	//all vars includes:
+	include("install/install.php");
+#####################################################################################################################
 ?>
-
 //this is a "template" for each chapter row
 var rowDummy = $('<tr class="chaptertr" data-start="" data-end="" data-img=""><td class="starttime"><span></span></td><td class="chaptername"></td><td class="timecode">\n<span></span>\n</td>\n</tr>');
-
 
 
 /**
@@ -25,14 +29,14 @@ setInterval( function jsonp(){
 
   // Anlegen und Einfügen des neuen Skripts
   var now = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-kultur.php?time="+now.getTime()+"&callback=callback";
+  url = "<?php echo $js_ajax_link_kul; ?>?time="+now.getTime()+"&anzahl=<?php  echo $liste; ?>&callback=callback";
   var script = document.createElement("script");
   script.setAttribute("src", url);
   script.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(script);
   
   
-}, <?php echo $aaa.$zu; ?>);
+}, <?php echo $setup_ms_callback; ?>);
 
 
 //---------------------------- Entgegennahme der Serverantwort
@@ -58,14 +62,14 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var relivecoverurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-kultur.php?time="+relivecoverurl.getTime()+"&relivecoverdata=relivecoverdata";
+  url = "<?php echo $js_ajax_link_kul; ?>?time="+relivecoverurl.getTime()+"&relivecoverdata=relivecoverdata";
   var relivecoverajax = document.createElement("script");
   relivecoverajax.setAttribute("src", url);
   relivecoverajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivecoverajax);
   
   
-}, <?php echo $aaa.$zu; ?>);
+}, <?php echo $setup_ms_callback; ?>);
 
 
 //---------------------------- Entgegennahme der Serverantwort
@@ -75,7 +79,7 @@ function relivecoverdata(data) {
 
 
 /**
-*	Callback Title
+*	Callback Title /Descriptions
 */
 setInterval( function jsonps(){
 
@@ -91,77 +95,16 @@ setInterval( function jsonps(){
 
   // Anlegen und Einfügen des neuen Skripts
   var relivetitletturl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-kultur.php?time="+relivetitletturl.getTime()+"&relivetitlenamedata=relivetitlenamedata";
+  url = "<?php echo $js_ajax_link_kul; ?>?time="+relivetitletturl.getTime()+"&relivetitlenamedata=relivetitlenamedata";
   var relivetitlettajax = document.createElement("script");
   relivetitlettajax.setAttribute("src", url);
   relivetitlettajax.setAttribute("type", "text/javascript");
   document.getElementsByTagName("head")[0].appendChild(relivetitlettajax);
   
-}, <?php echo $aaa.$zu; ?>);
+}, <?php echo $setup_ms_callback; ?>);
 
 //---------------------------- Entgegennahme der Serverantwort
 function relivetitlenamedata(data) { 
   document.getElementById("ReLiveTitle").innerHTML = data;
 }
 
-
-/**
-*	Callback Descriptions
-*/
-setInterval( function jsonps(){
-
-  // Löschen bereits vorhandener JSONP Skripte
-  var relivedescs = document.getElementsByTagName("script");
-  for (i=0; i<relivedescs.length; i++) {
-    var url = relivedescs[i].getAttribute("src");
-    if(!url) continue;
-    if(url.indexOf("relivedescdata")>=0) {
-      relivedescs[i].parentNode.removeChild(relivedescs[i]);
-    }
-  }
-
-  // Anlegen und Einfügen des neuen Skripts
-  var relivedescsurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-kultur.php?time="+relivedescsurl.getTime()+"&relivedescdata=relivedescdata";
-  var relivedescajax = document.createElement("script");
-  relivedescajax.setAttribute("src", url);
-  relivedescajax.setAttribute("type", "text/javascript");
-  document.getElementsByTagName("head")[0].appendChild(relivedescajax);
-  
-}, <?php echo $aaa.$zu; ?>);
-
-//---------------------------- Entgegennahme der Serverantwort
-function relivedescdata(data) { 
-  document.getElementById("ReLiveDec").innerHTML = data;
-}
-
-
-/**
-*	Callback ajax.js
-*/
-setInterval( function jsonps(){
-
-  // Löschen bereits vorhandener JSONP Skripte
-  var reliveajphp = document.getElementsByTagName("script");
-  for (i=0; i<reliveajphp.length; i++) {
-    var url = reliveajphp[i].getAttribute("src");
-    if(!url) continue;
-    if(url.indexOf("reliveajaxphpdata")>=0) {
-      reliveajphp[i].parentNode.removeChild(reliveajphp[i]);
-    }
-  }
-
-  // Anlegen und Einfügen des neuen Skripts
-  var reliveajaxphpurl = new Date();
-  url = "http://cm.wikibyte.org/testcodes/neu-chapters/ajax-kultur.php?time="+reliveajaxphpurl.getTime()+"&reliveajaxphpdata=reliveajaxphpdata";
-  var reliveajphpajax = document.createElement("script");
-  reliveajphpajax.setAttribute("src", url);
-  reliveajphpajax.setAttribute("type", "text/javascript");
-  document.getElementsByTagName("head")[0].appendChild(reliveajphpajax);
-  
-}, <?php echo $aaa.$zu; ?>);
-
-//---------------------------- Entgegennahme der Serverantwort
-function reliveajaxphpdata(data) { 
-  document.getElementById("Pty").innerHTML = data;
-}

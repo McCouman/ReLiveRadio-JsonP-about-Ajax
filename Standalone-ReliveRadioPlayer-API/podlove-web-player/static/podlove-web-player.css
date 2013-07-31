@@ -1,6 +1,10 @@
-/**
-* ReLiveCallbacks - PodloveWebPlayer - Standards
-*/
+/*
+ * ===========================================
+ * ReliveRadio Live Webplayer v2.1.8
+ * Licensed under The BSD 2-Clause License
+ * http://opensource.org/licenses/BSD-2-Clause
+ * ===========================================
+ */
 .podlovewebplayer_chapterbox.showonplay.active {
 	height: auto!important;
 }
@@ -30,6 +34,16 @@ div.togglers a.showdownloadbuttons.infobuttons.pwp-icon-download {
 	display:none!important;
 }
 
+
+.podlovewebplayer_meta .subtitle b{ 
+	font-weight: bold;
+	font-size: 13px;
+}
+.podlovewebplayer_meta .subtitle a{ 
+	font-size: 12px;
+	text-decoration: underline !important;
+	color: #fff !important;
+}
 /*
  * ===========================================
  * Podlove Web Player v2.0.8
