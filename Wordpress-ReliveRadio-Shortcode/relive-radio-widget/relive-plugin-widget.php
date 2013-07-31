@@ -3,7 +3,7 @@
 Plugin Name:  Relive Radio Widget Plugin
 Description:  Ermöglicht das Einbinden des ReliveRadio Miniplayers über die Widgets in die Sidebar
 Plugin URI:   http://labs.wikibyte.org
-Version:      1.1.2
+Version:      1.1.12
 Author:       Michael McCouman jr.
 Author URI:   http://wikibyte.org/
 Props:        Michael McCouman jr.
@@ -17,18 +17,19 @@ Props:        Michael McCouman jr.
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
+
 */
 /**
- * Adds Relive_Radio_Widget widget.
+ * Adds ReliveRadio_Widget widget.
  */
-class Relive_Radio_Widget extends WP_Widget {
+class ReliveRadio_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'Relive_Radio_Widget', // Base ID
+			'ReliveRadio_Widget', // Base ID
 			'ReliveRadio Miniplayer', // Name
 			array( 'description' => __( 'Relive Radio Widget zum Einbinden des Miniplayers', 'text_domain' ), ) // Args
 		);
@@ -45,7 +46,7 @@ class Relive_Radio_Widget extends WP_Widget {
 		//args:
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$stream = apply_filters( 'widget_stream', $instance['stream'] );
-		$css = apply_filters( 'widget_stream', $instance['css'] );
+		$css = apply_filters( 'widget_css', $instance['css'] );
 		
 		
 		//Start out-----------------------
@@ -59,11 +60,11 @@ class Relive_Radio_Widget extends WP_Widget {
 			if ( ! empty( $stream ) )
 			
 			//CSS out
-			if ( ! empty( $css ) )
+			#if ( ! empty( $css ) )
 			
 			
-			echo '<iframe style="border: none; margin-top: -30px; margin-left: -9px;" name="ReliveRadio Miniplayer" 
-			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini.php?stream='. $stream . '&css='.$css.'" height="100" width="100%" 
+			echo '<iframe style="border: none; margin-left: -10px;" name="ReliveRadio Miniplayer" 
+			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini.php?stream='. $stream . '&css='.$css.'" height="100" width="107%" 
 			marginwidth="10" marginheight="10" scrolling="no" border="0">
 			</iframe>';
 
@@ -100,7 +101,7 @@ class Relive_Radio_Widget extends WP_Widget {
 			$css = $instance[ 'css' ];
 		}
 		else {
-			$css = 'mix';
+			$css = 'css';
 		}
 
 ?>
@@ -115,21 +116,17 @@ class Relive_Radio_Widget extends WP_Widget {
 		<br>
 		<br>
 		
-		<label for="<?php echo $this->get_field_name( 'stream' ); ?>">Stream:</label> 
+		<label for="<?php echo $this->get_field_name( 'stream' ); ?>">Stream:</label>
+		<p style="font-size:9px;">Suche bitte einen Stream aus, den du in der Sidebar einbinden möchtest!<p/>
 		<div class="inside">
 			<select id="<?php echo $this->get_field_id( 'stream' ); ?>" name="<?php echo $this->get_field_name( 'stream' ); ?>">
 		<?php
-		
+	##---------	
 		//bedeutet: (Überprüfung innerhalb der Klammer) ? (wenn true) : (wenn falsch); 
-		echo '<option'; echo (esc_attr( $stream ) == '') ? ' 
-					value="" selected="selected"> -- Bitte Stream aussuchen -- </option>' : ' 
-					value=""> -- Bitte Stream aussuchen -- </option>'; 
-	##---------
-		//Mix
 		echo '<option'; echo (esc_attr( $stream ) == 'mix') ? ' 
-			value="mix" selected="selected">  Mix </option>' : ' 
-			value="mix"> Mix </option>'; 
-
+					value="mix" selected="selected"> Mix </option>' : ' 
+					value="mix"> Mix </option>'; 
+					
 		//Mix-Mobile
 		echo '<option'; echo (esc_attr( $stream ) == 'mix-mobile') ? ' 
 			value="mix-mobile" selected="selected">  Mix Mobile </option>' : ' 
@@ -160,24 +157,43 @@ class Relive_Radio_Widget extends WP_Widget {
 		</div>
 		
 		<br>
-		
-		<p style="font-size:12px;">Suche bitte einen Stream aus, den du in der Sidebar einbinden möchtest!<p/>
-
-
 <?php 
 /**
-* 	Versteckter Bereich:
+* 	Relive Style festlegen
 */
-?>	
-<div style="display:none;">
-		<label for="<?php echo $this->get_field_name( 'css' ); ?>">Style:</label> 
-		<input class="widefat" 
-		id="<?php echo $this->get_field_id( 'css' ); ?>" 
-		name="<?php echo $this->get_field_name( 'css' ); ?>" 
-		type="text" value="<?php echo esc_attr( $stream ); 
-		// ---Hier von stream übernehmen!--  // ?>" />
-</div>
-	
+?>
+<label for="<?php echo $this->get_field_name( 'css' ); ?>">Style:</label>
+<p style="font-size:9px;">Du kannst hier den Relive Style aussuchen.<p/>
+		<div class="inside">
+			<select id="<?php echo $this->get_field_id( 'css' ); ?>" name="<?php echo $this->get_field_name( 'css' ); ?>">
+		<?php
+		
+		//bedeutet: (Überprüfung innerhalb der Klammer) ? (wenn true) : (wenn falsch); 
+		echo '<option'; echo (esc_attr( $css ) == '') ? ' 
+					value="" selected="selected"> -- Kein Style ausgewählt -- </option>' : ' 
+					value=""> -- Kein Style ausgewählt -- </option>'; 
+	##---------
+		//Mix
+		echo '<option'; echo (esc_attr( $css ) == 'mix') ? ' 
+			value="mix" selected="selected"> Relive Mix </option>' : ' 
+			value="mix"> Mix </option>'; 
+
+	##---------			
+		//Technik
+		echo '<option'; echo (esc_attr( $css ) == 'technik') ? ' 
+			value="technik" selected="selected"> Relive Technik </option>' : ' 
+			value="technik"> Technik </option>'; 		
+
+	##---------	
+		//Kultur
+		echo '<option'; echo (esc_attr( $css ) == 'kultur') ? ' 
+			value="kultur" selected="selected"> Relive Kultur </option>' : ' 
+			value="kultur"> Kultur </option>'; 
+		?>			
+			</select>
+		</div>
+		
+		<br>
 	
 	</p>
 <?php 
@@ -201,6 +217,6 @@ class Relive_Radio_Widget extends WP_Widget {
 
 } 
 
-//register relive_radio_widget
-add_action( 'widgets_init', function() { register_widget( 'Relive_Radio_Widget' ); } );
+//register ReliveRadio_Widget
+add_action( 'widgets_init', function() { register_widget( 'ReliveRadio_Widget' ); } );
 ?>
