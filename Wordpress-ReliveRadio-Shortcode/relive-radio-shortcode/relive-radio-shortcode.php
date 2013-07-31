@@ -76,7 +76,7 @@ function rl_include( $atts ) {
     
     #
     # standalone player
-    $relive_player_url = 'http://cm.wikibyte.org/testcodes/neu-chapters/standalone-live.php?stream='.$rlive_stream.'&css='.$rlive_css.'&color='.$rlive_coloring.'';
+    $relive_player_url = 'http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream='.$rlive_stream.'&css='.$rlive_css.'&color='.$rlive_coloring.'';
 		
 		//player outs
 		$relive_player_out = $relive_player_url;

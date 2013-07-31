@@ -17,7 +17,6 @@ Props:        Michael McCouman jr.
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
 */
 /**
  * Adds Relive_Radio_Widget widget.
@@ -64,7 +63,7 @@ class Relive_Radio_Widget extends WP_Widget {
 			
 			
 			echo '<iframe style="border: none; margin-top: -30px; margin-left: -9px;" name="ReliveRadio Miniplayer" 
-			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini-live.php?stream='. $stream . '&css='.$css.'" height="100" width="100%" 
+			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini.php?stream='. $stream . '&css='.$css.'" height="100" width="100%" 
 			marginwidth="10" marginheight="10" scrolling="no" border="0">
 			</iframe>';
 
