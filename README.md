@@ -28,7 +28,7 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> ReliveRadio</a> <
 <img src="https://a248.e.akamai.net/camo.github.com/739a757846f69c1cc10163619eec008e871b591b/687474703a2f2f6170692e666c617474722e636f6d2f627574746f6e2f666c617474722d62616467652d6c617267652e706e67" 
 alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman jr.</a> 
 <h2>RSWP: Der Standalone WebPlayer</h2>
-<a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen2.png"></a>
+<a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php"><img height="430px"src="https://raw.github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/master/screen2.png"></a>
 <pre>/**
 * @API: Relive Standalone WebPlayer 
 * @info: Aufbau und veränderter Podlove Standalone WebPlayer mit eigenen IDs, 
@@ -42,12 +42,12 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman 
 <i>mix-mobile, technik-mobile, kultur-mobile</i>die RPStA API angesprochen werden: </b><br>
 Das einbinden des Streams erfolgt über: <code>standalone.php?css=STREAM</code>
 <ul>
-<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=mix"><code>standalone.php?stream=mix</code></a></li>
-<li>Mix Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=mix-mobile"><code>standalone.php?stream=mix-mobile</code></a></li>
-<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=technik"><code>standalone.php?stream=technik</code></a></li>
-<li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=technik-mobile"><code>standalone.php?stream=technik-mobile</code></a></li>
-<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=kultur"><code>standalone.php?stream=kultur</code></a></li>
-<li>Kultur Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?stream=kultur-mobile"><code>standalone.php?stream=kultur-mobile</code></a></li>
+<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=mix"><code>standalone.php?stream=mix</code></a></li>
+<li>Mix Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=mix-mobile"><code>standalone.php?stream=mix-mobile</code></a></li>
+<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=technik"><code>standalone.php?stream=technik</code></a></li>
+<li>Technik Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=technik-mobile"><code>standalone.php?stream=technik-mobile</code></a></li>
+<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=kultur"><code>standalone.php?stream=kultur</code></a></li>
+<li>Kultur Mobile: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?stream=kultur-mobile"><code>standalone.php?stream=kultur-mobile</code></a></li>
 </ul>
 <pre>/**
 * @API: PRStA 
@@ -60,10 +60,10 @@ Das einbinden des Streams erfolgt über: <code>standalone.php?css=STREAM</code>
 <b>Der Player kann in den Relive Stylefarben für <i>Mix, Technik, Kultur</i> über die RPSA einfach eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 <ul>
-<li>Standard: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php"><code>standalone.php</code></a> //Black Player</li>
-<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=mix"><code>standalone.php?css=mix</code></a> //Green</li>
-<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=technik"><code>standalone.php?css=technik</code></a> //light</li>
-<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?css=kultur"><code>standalone.php?css=kultur</code></a> //orange</li>
+<li>Standard: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php"><code>standalone.php</code></a> //Black Player</li>
+<li>Mix: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?css=mix"><code>standalone.php?css=mix</code></a> //Green</li>
+<li>Technik: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?css=technik"><code>standalone.php?css=technik</code></a> //light</li>
+<li>Kultur: <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?css=kultur"><code>standalone.php?css=kultur</code></a> //orange</li>
 </ul>
 <pre>/**
 * @API: PRSA 
@@ -77,10 +77,10 @@ Das einfärben erfolgt über: <code>standalone.php?css=STYLEFARBE</code>
 <b>Der Player kann die RPCA auch seperat mit einer eigenen Farbe eingefärbt werden: </b><br>
 Das einfärben erfolgt über: <code>standalone.php?color=FARBCODE</code>
 <ul>
-<li>Bsp.: Rot <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=f00"><code>standalone.php?color=f00</code></a></li>
-<li>Bsp.: Blau <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=44f"><code>standalone.php?color=44f</code></a></li>
-<li>Bsp.: Lila <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=a0a"><code>standalone.php?color=a0a</code></a></li>
-<li>Bsp.: Pink <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/standalone.php?color=f0f"><code>standalone.php?color=f0f</code></a></li>
+<li>Bsp.: Rot <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?color=f00"><code>standalone.php?color=f00</code></a></li>
+<li>Bsp.: Blau <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?color=44f"><code>standalone.php?color=44f</code></a></li>
+<li>Bsp.: Lila <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?color=a0a"><code>standalone.php?color=a0a</code></a></li>
+<li>Bsp.: Pink <a target="_blank" href="http://cm.wikibyte.org/testcodes/neu-chapters/test.php?color=f0f"><code>standalone.php?color=f0f</code></a></li>
 </ul>
 <pre>/**
 * @API: RPCA
