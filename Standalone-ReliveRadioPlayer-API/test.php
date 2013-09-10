@@ -254,7 +254,7 @@ echo "subtitle: '<b>Dein Podcast Radio:</b> Das <a style=\"color:#fff;\" href=\"
 
 //startepisode (läuft gerade)
 echo "chapters: [ \n";
-  echo " {'start':'00:00:00.000','title':'". $suche["live_episode"]["db"]["name"]. " - ". $suche["live_episode"]["track_title"] ."', 'image':'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg'} \n";
+  echo " {'start':'00:00:00.000','title':'". preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["db"]["name"]). " - ". preg_replace("/(')+/","&rsquo;",$suche["live_episode"]["track_title"]) ."', 'image':'http://static.reliveradio.de/logos/". $suche["live_episode"]["db"]["slugintern"]. ".jpg'} \n";
 
 //weitere Episoden
 for($i = 0; $i < $anzahlouts; ++$i) { 
