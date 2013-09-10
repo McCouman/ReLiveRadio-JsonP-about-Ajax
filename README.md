@@ -179,9 +179,9 @@ Um Relive als Player in ein Projekt einzubinden kann das folgendes PlugIn kosten
 * @version: 0.1.0 - 2.1.9rc RSWP
 */</pre>
 
-Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer
-URI: <a style="color: #08C;" href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax</a>
-Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.
+Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer <br>
+URI: <a style="color: #08C;" href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax</a><br>
+Description: ReliveRadio iFrame and API integration in RRJA Standalone WebPlayer.<br>
 
 Copyright (c) 2013, Wikibyte.org - All rights reserved.
 
@@ -224,11 +224,11 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> ReliveRadio</a>
 * @version: 1.1.2 chapter api
 */</pre>
 
-Version: 2.1.9 
-Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a>
-Author URI: http://labs.wikibyte.org/ 
-License: BSD 2-Clause License 
-License URI: http://opensource.org/licenses/BSD-2-Clause 
+Version: 2.1.9 <br>
+Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a><br>
+Author URI: http://labs.wikibyte.org/ <br>
+License: BSD 2-Clause License <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause <br>
 
 Copyright (c) 2013, Wikibyte.org - All rights reserved.
 
@@ -264,14 +264,17 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman 
 * @version: 1.5 iframe shortcode
 */</pre>
 
-Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer 
+Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer <br>
 URI:  <a style="color: #08C;" href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode</a>
-Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project. 
-Version: 1.5.1  
-Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a> 
-Author URI: http://labs.wikibyte.org/ 
-License: BSD 2-Clause License 
-License URI: http://opensource.org/licenses/BSD-2-Clause  
+
+<br>Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project. 
+<br>
+Version: 1.5.1  <br>
+Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a> <br>
+Author URI: http://labs.wikibyte.org/ <br>
+License: BSD 2-Clause License <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
+
 
 Copyright (c) 2013, Wikibyte.org - All rights reserved.
 
@@ -306,13 +309,13 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman 
 
 
 Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Miniplayer  
-URI: <a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget</a>
-Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project. 
-Version: 1.1.12  
-Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a>  
-Author URI: http://labs.wikibyte.org/
-License: BSD 2-Clause License 
-License URI: http://opensource.org/licenses/BSD-2-Clause  
+URI: <a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-widget</a><br>
+Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project. <br>
+Version: 1.1.12  <br>
+Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a>  <br>
+Author URI: http://labs.wikibyte.org/<br>
+License: BSD 2-Clause License <br>
+License URI: http://opensource.org/licenses/BSD-2-Clause  <br>
 
 Copyright (c) 2013, Wikibyte.org - All rights reserved.
 
@@ -338,14 +341,14 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman 
  * ===========================================
  */</pre>
 
-Plugin Name: Podlove Web Player 
-Plugin URI: http://podlove.org/podlove-web-player/ 
-Description: Video and audio plugin for WordPress built on the MediaElement.js HTML5 media player library. 
-Version: 2.1.0 
+Plugin Name: Podlove Web Player <br>
+Plugin URI: http://podlove.org/podlove-web-player/ <br>
+Description: Video and audio plugin for WordPress built on the MediaElement.js HTML5 media player library. <br>
+Version: 2.1.0 <br>
 Author: Podlove Team - <a style="color: #08C;" href="https://github.com/gerritvanaaken/">Gerrit van Aaken</a>, <a style="color: #08C;" href="https://github.com/simonwaldherr/">Simon Waldherr</a>, <a style="color: #08C;" href="https://github.com/Kambfhase/">Frank Hase</a>, <a style="color: #08C;" href="https://github.com/eteubert/">Eric Teubert</a> and <a style="color: #08C;" href="https://github.com/podlove/podlove-web-player/contributors">others</a><br>
-Author URI: http://podlove.org/ 
-License: BSD 2-Clause License
-License URI: http://opensource.org/licenses/BSD-2-Clause 
+Author URI: http://podlove.org/ <br>
+License: BSD 2-Clause License<br>
+License URI: http://opensource.org/licenses/BSD-2-Clause <br>
 
 Copyright (c) 2013, Podlove.org - All rights reserved.
 
