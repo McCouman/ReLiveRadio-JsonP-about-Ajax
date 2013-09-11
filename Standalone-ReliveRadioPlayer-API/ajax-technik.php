@@ -10,7 +10,7 @@
 */
 
 	//ReRadio
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technik.json');
+	$jsonfile = file_get_contents('http://reliveradio.de/stream/technik.json');
 
 	//DeCode Json out:
 	$suche = json_decode($jsonfile,TRUE);

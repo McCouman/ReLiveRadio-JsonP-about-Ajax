@@ -9,7 +9,7 @@
 *
 */	
 	//ReRadio Mix
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+	$jsonfile = file_get_contents('http://reliveradio.de/stream/mix.json');
 
 	//DeCode Json out
 	$suche = json_decode($jsonfile,TRUE);

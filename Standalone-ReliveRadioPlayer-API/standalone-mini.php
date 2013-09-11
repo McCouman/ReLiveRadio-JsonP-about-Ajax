@@ -8,6 +8,12 @@
 	<script src="./podlove-web-player/libs/jquery-1.9.1.min.js"></script>
 	<script src="./podlove-web-player/static/podlove-web-player.js"></script>
 <?php
+/**
+*	ReliveRadio Live MiniWeblayer 
+*	@developer by Michael McCouman jr.
+* 	@date 11 Aug. 2013
+*	@version 2.1.10
+*/
 
 ## Relive - CSS API #######################################################################################################
 /**

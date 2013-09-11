@@ -10,7 +10,7 @@
 */
 
 	//ReRadio Kultur
-	$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
+	$jsonfile = file_get_contents('http://reliveradio.de/stream/kultur.json');
 
 	//DeCode Json out:
 	$suche = json_decode($jsonfile,TRUE);

@@ -8,6 +8,14 @@
 	<script src="./podlove-web-player/libs/jquery-1.9.1.min.js"></script>
 	<script src="./podlove-web-player/static/podlove-web-player.js"></script>
 <?php
+/**
+*	ReliveRadio Live Weblayer 
+*	@developer by Michael McCouman jr.
+* 	@date 11 Aug. 2013
+*	@version 2.1.10
+*/
+
+
 //inc url
 include ("install/install.php");
 
@@ -49,6 +57,14 @@ if (isset($_GET["css"]) && !empty($_GET["css"])) {
 
 
 ## Stream API ###############################################################################################################
+/**
+*	Relive - Stream API
+*	@developer by Michael McCouman jr.
+* 	@date 11 Aug. 2013
+*	@version 2.2
+*/
+
+
 // Abfrage welcher Stream ?
 if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 	
@@ -68,14 +84,14 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		## Mix Stream
 		if ($stream == 'mix'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24.mp3"; 
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/mix.json');
 			$names = "Mix";
 			$urilink = "http://reliveradio.de/stream/mix";
 			echo '<script src="'.$setup_url.'/js-mix.php?anzahl='.$zahl_liste.'"></script>'; 
 		}
 		elseif ($stream == 'mix-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/24mobile.mp3"; 
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/mix.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/mix.json');
 			$names = "Mix";
 			$urilink = "http://reliveradio.de/stream/mix";
 			echo '<script src="'.$setup_url.'/js-mix.php?anzahl='.$zahl_liste.'"></script>'; 
@@ -84,14 +100,14 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		## Technik Stream				 
 		elseif ($stream == 'technik'){ 
 			$uristream = "http://stream.reliveradio.de:8000/technik.mp3";
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technik.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/technik.json');
 			$names = "Technik";
 			$urilink = "http://reliveradio.de/stream/technik";
 			echo '<script src="'.$setup_url.'/js-technik.php?anzahl='.$zahl_liste.'"></script>'; 
 		}			 
 		elseif ($stream == 'technik-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/technikmobile.mp3"; 
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/technik.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/technik.json');
 			$names = "Technik";
 			$urilink = "http://reliveradio.de/stream/technik";
 			echo '<script src="'.$setup_url.'/js-technik.php?anzahl='.$zahl_liste.'"></script>'; 
@@ -100,14 +116,14 @@ if (isset($_GET["stream"]) && !empty($_GET["stream"])) {
 		## Kultur Stream				 
 		elseif ($stream == 'kultur'){ 
 			$uristream = "http://stream.reliveradio.de:8000/kultur.mp3"; 
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/kultur.json');
 			$names = "Kultur";
 			$urilink = "http://reliveradio.de/stream/kultur";
 			echo '<script src="'.$setup_url.'/js-kultur.php?anzahl='.$zahl_liste.'"></script>'; 
 		}			 
 		elseif ($stream == 'kultur-mobile'){ 
 			$uristream = "http://stream.reliveradio.de:8000/kulturmobile.mp3";
-			$jsonfile = file_get_contents('http://testpreview.reliveradio.de/stream/kultur.json');
+			$jsonfile = file_get_contents('http://reliveradio.de/stream/kultur.json');
 			$names = "Kultur";
 			$urilink = "http://reliveradio.de/stream/kultur";
 			echo '<script src="'.$setup_url.'/js-kultur.php?anzahl='.$zahl_liste.'"></script>'; 
