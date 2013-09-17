@@ -51,7 +51,7 @@ div.widget[id*=_relive_radio_widget] .widget-top{
     background: #000;
 }
 div.widget[id*=_relive_radio_widget] .widget-control-actions {
-	background: url(/wp-content/plugins/relive-plugin-widget/patter.png) #333 !important;
+	background: url(/wp-content/plugins/relive-plugin-widget/inc/patter.png) #333 !important;
 	padding: 12px;
 	margin-left: -12px;
 	margin-right: -12px;
@@ -59,7 +59,7 @@ div.widget[id*=_relive_radio_widget] .widget-control-actions {
 	border-top: 1px solid #555;
 }
 div.widget[id*=_relive_radio_widget] .widget-inside{
-    background: url(/wp-content/plugins/relive-plugin-widget/bg.png) #000 !important;
+    background: url(/wp-content/plugins/relive-plugin-widget/inc/bg.png) #000 !important;
 	border: 2px solid #000;
 }
 div.widget[id*=_relive_radio_widget] .cw-color-picker { 
@@ -194,7 +194,7 @@ select.ins {
 	width: 100%;
 }
 .init {
-	background: url(/wp-content/plugins/relive-plugin-widget/ini.png) center right #222;
+	background: url(/wp-content/plugins/relive-plugin-widget/inc/ini.png) center right #222;
 	border-color: #008DB9 !important;
 	color: #4EC8E7 !important;
 }
@@ -395,12 +395,12 @@ echo $id[0].'-'.$id[1] . "-" . $id[2].'-savewidget';
 </script>		
 	<p>
 	  <label id="tc" for="<?php echo $this->get_field_id('color'); ?>"><b>Eigene Farbe:</b></label> 
-	  <input class="widefat init" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php if($color) { echo ''.$color; } else { echo '#'; } ?>" />
+	  <input class="widefat init" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php if($color) { echo '#'.$color; } else { echo '#'; } ?>" />
 		<center><div class="cw-color-picker" rel="<?php echo $this->get_field_id('color'); ?>"></div></center>
 	</p>
 	
 	<foo>
-	<a class="copy" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><img id="project" style="width: 22px;" src="<?php echo plugins_url('/rr-widget.png', __FILE__ ); ?>" /> <span class="copy">Ein <b>ReliveRadio</b> Projekt</a></a>
+	<a class="copy" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><img id="project" style="width: 22px;" src="<?php echo plugins_url('/inc/rr-widget.png', __FILE__ ); ?>" /> <span class="copy">Ein <b>ReliveRadio</b> Projekt</a></a>
 	</foo>
 <?php 
 	}
