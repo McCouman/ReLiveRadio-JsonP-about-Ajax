@@ -3,7 +3,7 @@
 Plugin Name:  Relive Radio Widget Plugin
 Description:  Ermöglicht das Einbinden des ReliveRadio Miniplayers über die Widgets in die Sidebar
 Plugin URI:   http://labs.wikibyte.org
-Version:      2.2.1
+Version:      2.2.3alpha
 Author:       Michael McCouman jr.
 Author URI:   http://wikibyte.org/
 Props:        Michael McCouman jr.
@@ -166,7 +166,7 @@ class relive_radio_i_widget extends WP_Widget {
 			$color = $instance[ 'color' ];
 		}
 		else {
-			$color = '#'; //no input
+			$color = ''; //no input
 		}
 
 ?>
