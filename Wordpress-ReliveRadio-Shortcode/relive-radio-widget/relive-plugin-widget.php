@@ -3,7 +3,7 @@
 Plugin Name:  Relive Radio Widget Plugin
 Description:  Ermöglicht das Einbinden des ReliveRadio Miniplayers über die Widgets in die Sidebar
 Plugin URI:   http://labs.wikibyte.org
-Version:      1.1.12
+Version:      1.2.1
 Author:       Michael McCouman jr.
 Author URI:   http://wikibyte.org/
 Props:        Michael McCouman jr.
@@ -19,19 +19,80 @@ Props:        Michael McCouman jr.
     GNU General Public License for more details.
 
 */
+
+
+add_action('admin_print_styles-widgets.php', 'relive_widgets_style');
+function relive_widgets_style(){
+
+    echo <<<EOF
+<style type="text/css">
+div#widget-list div.ui-draggable[id*=_relive_radio_widget] .widget-top {
+	border: none !important;
+    background: #000;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 3px;
+	border-radius: 4px;
+	text-shadow: #222 0 0 0;
+}
+div.widget[id*=_relive_radio_widget] {
+	border: none !important;
+    background: #000;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 3px;
+	border-radius: 4px;
+	text-shadow: #222 0 0 0;
+}
+div.widget[id*=_relive_radio_widget] .widget-top{
+    color: #eee;
+    text-shadow: #222 0 0 0;
+    border: none !important;
+    background: #000;
+}
+div.widget[id*=_relive_radio_widget] .widget-control-actions {
+	background: url(/wp-content/plugins/relive-plugin-widget/patter.png) #333 !important;
+	padding: 12px;
+	margin-left: -12px;
+	margin-right: -12px;
+	margin-bottom: -12px;
+	border-top: 1px solid #555;
+}
+div.widget[id*=_relive_radio_widget] .widget-inside{
+    background: url(/wp-content/plugins/relive-plugin-widget/bg.png) #000 !important;
+	border: 2px solid #000;
+}
+div.widget[id*=_relive_radio_widget] .cw-color-picker { 
+	background: #002A2B;
+	border: 1px solid #00455F;
+	width: 197px; 
+}
+div.widget[id*=_relive_radio_widget] .alignleft a { color:#eee; }
+div.widget[id*=_relive_radio_widget] .alignleft { color:#aaa; }
+div.widget[id*=_relive_radio_widget] .in-widget-title {
+	color: #999;
+	text-shadow: #222 0 0 0;
+}
+</style>
+EOF;
+}
+
+
 /**
- * Adds ReliveRadio_Widget widget.
+ * Adds Relive_Radio_Widget widget.
  */
-class ReliveRadio_Widget extends WP_Widget {
+class relive_radio_i_widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'ReliveRadio_Widget', // Base ID
+			'Relive_Radio_Widget', // Base ID
 			'ReliveRadio Miniplayer', // Name
-			array( 'description' => __( 'Relive Radio Widget zum Einbinden des Miniplayers', 'text_domain' ), ) // Args
+			array( 
+			
+			'description' => __( 'Relive Radio Widget zum Einbinden des Miniplayers', 'text_domain' ),  ) // Args
 		);
 	}
 
@@ -46,8 +107,8 @@ class ReliveRadio_Widget extends WP_Widget {
 		//args:
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$stream = apply_filters( 'widget_stream', $instance['stream'] );
-		$css = apply_filters( 'widget_css', $instance['css'] );
-		
+		$css = apply_filters( 'widget_stream', $instance['css'] );
+		$color = apply_filters( 'widget_stream', $instance['color'] );
 		
 		//Start out-----------------------
 		echo $before_widget;
@@ -59,12 +120,8 @@ class ReliveRadio_Widget extends WP_Widget {
 			//Stream out
 			if ( ! empty( $stream ) )
 			
-			//CSS out
-			#if ( ! empty( $css ) )
-			
-			
-			echo '<iframe style="border: none; margin-left: -10px;" name="ReliveRadio Miniplayer" 
-			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini.php?stream='. $stream . '&css='.$css.'" height="100" width="107%" 
+			echo '<iframe style="border: none; margin-top: -30px; margin-left: -9px;" name="ReliveRadio Miniplayer" 
+			src="http://cm.wikibyte.org/testcodes/neu-chapters/standalone-mini.php?stream='. $stream . '&css='.$css.'&color='.$color.'" height="100" width="100%" 
 			marginwidth="10" marginheight="10" scrolling="no" border="0">
 			</iframe>';
 
@@ -101,13 +158,137 @@ class ReliveRadio_Widget extends WP_Widget {
 			$css = $instance[ 'css' ];
 		}
 		else {
-			$css = 'css';
+			$css = ''; //no input
+		}
+		
+		//color:
+		if ( isset( $instance[ 'color' ] ) ) {
+			$color = $instance[ 'color' ];
+		}
+		else {
+			$color = '#'; //no input
 		}
 
 ?>
+<style>
+#rr-widget {
+	border: 2px solid #222;
+	background: #FFF;
+	margin-bottom: 15px;
+	padding: 10px;
+}
+#tc {
+	color:#008EBB;
+	font-size:12px;
+	text-shadow: #065A2B 0px 0 3px;
+}
+.itc {
+	border-color: #008DB9 !important;
+	background: #222 !important;
+	color: #4EC8E7 !important;
+}
+select.ins {
+	border-color: #008DB9 !important;
+	background: #222 !important;
+	color: #4EC8E7 !important;
+	width: 100%;
+}
+.init {
+	background: url(/wp-content/plugins/relive-plugin-widget/ini.png) center right #222;
+	border-color: #008DB9 !important;
+	color: #4EC8E7 !important;
+}
+.copy {
+	text-decoration: none !important;
+	color: #fff;
+}
+#<?php
+
+$id = explode("-", $this->get_field_id("widget_id"));
+echo $id[0].'-'.$id[1] . "-" . $id[2].'-savewidget';
+
+
+?> { 
+	background: #000 !important;
+
+	background-color: #000 !important;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(#333)) !important;
+	background-image: -webkit-linear-gradient(top,#000,#333) !important;
+	background-image: -moz-linear-gradient(top,#000,#333) !important;
+	background-image: -ms-linear-gradient(top,#000,#333) !important;
+	background-image: -o-linear-gradient(top,#000,#333) !important;
+	background-image: linear-gradient(to bottom,#000,#333) !important;
+	border-color: #666 !important;
+	border-bottom-color: #444 !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5) !important;
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5) !important;
+	color: #999 !important;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 rgba(200, 200, 200, 0.1) !important;
+
+	display: inline-block !important;
+	text-decoration: none !important;
+	font-size: 12px !important;
+	line-height: 23px !important;
+	height: 24px !important;
+	margin: 0 !important;
+	padding: 0 10px 1px !important;
+	cursor: pointer !important;
+	border-width: 1px !important;
+	border-style: solid !important;
+	-webkit-border-radius: 0px !important;
+	-webkit-appearance: none !important;
+	border-radius: 5px !important;
+	white-space: nowrap !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+</style>
+<div id="rr-widget">
+	<center>
+		<a href="#"><img src="https://si0.twimg.com/profile_images/3147800911/89e8a8fab0132c06fc82deb5b7d62890_bigger.png" /></a>
+	</center>
+</div>
+
+<?php
+/**
+* für Später!
+
+<script>
+ jQuery(document).ready( function() { 
+  jQuery('#SelectList').bind('change', function (e) { 
+    if( jQuery('#SelectList').val() == 'on') {
+      jQuery('div.iv').show();
+    }
+    else{
+      jQuery('div.iv').hide();
+    }         
+  });  
+});
+</script>
+	
+
+  <select id="SelectList">
+    <option value="1">Option 1</option>
+    <option value="on">Other</option>
+  </select>
+  <div class="iv" style="background:#f00;">
+  Other
+  </div>
+*/
+?>
+
+
+
+
+
+<?
+#################### Label Title
+?>
 	<p>
-		<label for="<?php echo $this->get_field_name( 'title' ); ?>">Titel:</label> 
-		<input class="widefat" 
+		<label id="tc" for="<?php echo $this->get_field_name( 'title' ); ?>"><b>Titel:</b></label> 
+		<input class="widefat itc" 
 		id="<?php echo $this->get_field_id( 'title' ); ?>" 
 		name="<?php echo $this->get_field_name( 'title' ); ?>" 
 		type="text" 
@@ -115,18 +296,24 @@ class ReliveRadio_Widget extends WP_Widget {
 		
 		<br>
 		<br>
-		
-		<label for="<?php echo $this->get_field_name( 'stream' ); ?>">Stream:</label>
-		<p style="font-size:9px;">Suche bitte einen Stream aus, den du in der Sidebar einbinden möchtest!<p/>
+<?
+#################### Label Stream
+?>		
+		<label id="tc" for="<?php echo $this->get_field_name( 'stream' ); ?>"><b>Stream:</b></label> 
 		<div class="inside">
-			<select id="<?php echo $this->get_field_id( 'stream' ); ?>" name="<?php echo $this->get_field_name( 'stream' ); ?>">
+			<select class="ins" id="<?php echo $this->get_field_id( 'stream' ); ?>" name="<?php echo $this->get_field_name( 'stream' ); ?>">
 		<?php
-	##---------	
+		
 		//bedeutet: (Überprüfung innerhalb der Klammer) ? (wenn true) : (wenn falsch); 
+		echo '<option'; echo (esc_attr( $stream ) == '') ? ' 
+					value="" selected="selected"> -- Bitte Stream aussuchen -- </option>' : ' 
+					value=""> -- Bitte Stream aussuchen -- </option>'; 
+	##---------
+		//Mix
 		echo '<option'; echo (esc_attr( $stream ) == 'mix') ? ' 
-					value="mix" selected="selected"> Mix </option>' : ' 
-					value="mix"> Mix </option>'; 
-					
+			value="mix" selected="selected">  Mix </option>' : ' 
+			value="mix"> Mix </option>'; 
+
 		//Mix-Mobile
 		echo '<option'; echo (esc_attr( $stream ) == 'mix-mobile') ? ' 
 			value="mix-mobile" selected="selected">  Mix Mobile </option>' : ' 
@@ -155,47 +342,66 @@ class ReliveRadio_Widget extends WP_Widget {
 	 		?>			
 			</select>
 		</div>
-		
 		<br>
-<?php 
-/**
-* 	Relive Style festlegen
-*/
-?>
-<label for="<?php echo $this->get_field_name( 'css' ); ?>">Style:</label>
-<p style="font-size:9px;">Du kannst hier den Relive Style aussuchen.<p/>
+<?
+#################### Label CSS
+?>	
+		<label id="tc" for="<?php echo $this->get_field_name( 'css' ); ?>"><b>Design:</b></label> 
 		<div class="inside">
-			<select id="<?php echo $this->get_field_id( 'css' ); ?>" name="<?php echo $this->get_field_name( 'css' ); ?>">
+			<select class="ins" id="<?php echo $this->get_field_id( 'css' ); ?> itc" name="<?php echo $this->get_field_name( 'css' ); ?>">
 		<?php
 		
 		//bedeutet: (Überprüfung innerhalb der Klammer) ? (wenn true) : (wenn falsch); 
 		echo '<option'; echo (esc_attr( $css ) == '') ? ' 
-					value="" selected="selected"> -- Kein Style ausgewählt -- </option>' : ' 
-					value=""> -- Kein Style ausgewählt -- </option>'; 
+					value="" selected="selected"> -- Kein Design ausgewählt -- </option>' : ' 
+					value=""> -- Kein Design ausgewählt -- </option>'; 
 	##---------
 		//Mix
 		echo '<option'; echo (esc_attr( $css ) == 'mix') ? ' 
-			value="mix" selected="selected"> Relive Mix </option>' : ' 
+			value="mix" selected="selected">  Mix </option>' : ' 
 			value="mix"> Mix </option>'; 
 
 	##---------			
 		//Technik
 		echo '<option'; echo (esc_attr( $css ) == 'technik') ? ' 
-			value="technik" selected="selected"> Relive Technik </option>' : ' 
+			value="technik" selected="selected">  Technik </option>' : ' 
 			value="technik"> Technik </option>'; 		
-
+			 	
 	##---------	
 		//Kultur
 		echo '<option'; echo (esc_attr( $css ) == 'kultur') ? ' 
-			value="kultur" selected="selected"> Relive Kultur </option>' : ' 
+			value="kultur" selected="selected">  Kultur </option>' : ' 
 			value="kultur"> Kultur </option>'; 
-		?>			
+			
+	 		?>			
 			</select>
 		</div>
-		
 		<br>
-	
+		
+<?
+#################### Label Farbe
+?>
+<script type="text/javascript">
+	//<![CDATA[
+		jQuery(document).ready(function(){
+			// colorpicker field
+			jQuery('.cw-color-picker').each(function(){
+				var $this = jQuery(this),
+				id = $this.attr('rel');
+				$this.farbtastic('#' + id);
+			});
+		});
+	//]]>   
+</script>		
+	<p>
+	  <label id="tc" for="<?php echo $this->get_field_id('color'); ?>"><b>Eigene Farbe:</b></label> 
+	  <input class="widefat init" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php if($color) { echo ''.$color; } else { echo '#'; } ?>" />
+		<center><div class="cw-color-picker" rel="<?php echo $this->get_field_id('color'); ?>"></div></center>
 	</p>
+	
+	<foo>
+	<a class="copy" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><img id="project" style="width: 22px;" src="<?php echo plugins_url('/rr-widget.png', __FILE__ ); ?>" /> <span class="copy">Ein <b>ReliveRadio</b> Projekt</a></a>
+	</foo>
 <?php 
 	}
 
@@ -211,12 +417,34 @@ class ReliveRadio_Widget extends WP_Widget {
 		$instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['stream'] = ( !empty( $new_instance['stream'] ) ) ? strip_tags( $new_instance['stream'] ) : '';
 		$instance['css'] = ( !empty( $new_instance['css'] ) ) ? strip_tags( $new_instance['css'] ) : '';
-
+		$instance['color'] = ( !empty( $new_instance['color'] ) ) ? str_replace("#", "", $new_instance['color']) : '';
+		
 		return $instance;
 	}
+}
 
-} 
+// register message box widget
+add_action('widgets_init', create_function('', 'return register_widget("relive_radio_i_widget");'));
 
-//register ReliveRadio_Widget
-add_action( 'widgets_init', function() { register_widget( 'ReliveRadio_Widget' ); } );
+function sample_load_color_picker_script() {
+	wp_enqueue_script('farbtastic');
+}
+function sample_load_color_picker_style() {
+	wp_enqueue_style('farbtastic');	
+}
+add_action('admin_print_scripts-widgets.php', 'sample_load_color_picker_script');
+add_action('admin_print_styles-widgets.php', 'sample_load_color_picker_style');
+
+
+
+/***
+für Später !
+//JQ select => object
+function my_plugin_admin_init() {
+     wp_register_script( 'my-script', plugins_url( '/script.js', __FILE__ ), array( 'jquery' ));
+     wp_enqueue_script('my-script');
+}
+add_action( 'admin_print_scripts-widgets.php', 'my_plugin_admin_init' );
+*/
+
 ?>
