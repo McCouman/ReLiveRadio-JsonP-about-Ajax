@@ -41,6 +41,6 @@ Copyright (c) 2013, C3ltaX Media - All rights reserved.
 
 @developer: <a style="color: #08C;" href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
 
-@version: 2.1.10
+@version: 3.0.0.10
 
 Copyright (c) 2013, labs.wikibyte.org - All rights reserved.
