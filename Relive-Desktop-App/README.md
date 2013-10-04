@@ -23,7 +23,7 @@ Schnell und einfach das bekannteste Podcast Radio auf dem Desktop hören, mit de
 
 @developer: <a style="color: #08C;" href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
 
-@version: 2.1.10
+@version: 2.2.13
 
 Copyright (c) 2013, C3ltaX Media - All rights reserved.
 
