@@ -6,7 +6,7 @@ Schnell und einfach das bekannteste Podcast Radio auf dem Desktop hören, mit de
 
 <a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/raw/master/Relive-Desktop-App/ReliveRadio-2.1.13.zip">Hier Downloaden</a>
 
-<img src="https://trello-attachments.s3.amazonaws.com/51f5116bbdd671c004000b35/5246e8eb58c494977a001568/c4ca6a22ea3da220fb1d157f91f367d7/Bildschirmfoto_2013-10-02_um_17.00.38.png">
+<img src="https://trello-attachments.s3.amazonaws.com/51f5116bbdd671c004000b35/5246e8eb58c494977a001568/3ef4e6c9f92a461fcf47bfeb0e59dae1/Bildschirmfoto_2013-10-04_um_17.02.10.png">
 
 <h1>Lizenzen</h1>
 <h2>ReliveRadio Desktop APP</h2>
