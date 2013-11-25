@@ -98,13 +98,13 @@ alt="Flattr This" title="Flattr This" style="max-width:100%;"> Michael McCouman 
 * @Shortcode: RWIS - Relive Webplayer Iframe Shortcode
 * @info: Shortcode zum Einbinden des Relive WebPlayers in eine Wordpress Seite
 * @developer: <a style="color: #08C;" href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
-* @version: 1.5 iframe shortcode
+* @version: 1.6 iframe shortcode
 */</pre>
 
 Name: <a style="color: #08C;" href="http://reliveradio.de/">ReliveRadio</a> Livestream Webplayer 
 URI:  <a style="color: #08C;" href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode">https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/tree/master/Wordpress-ReliveRadio-Shortcode/relive-radio-shortcode</a>
 Description: ReliveRadio Plugin for WordPress iframe and implemented through a live stream media player by RRJA WebPlayer project. 
-Version: 1.5.1  
+Version: 1.6.0  
 Author: <a style="color: #08C;" href="https://github.com/McCouman">Michael McCouman jr.</a> 
 Author URI: http://labs.wikibyte.org/ 
 License: BSD 2-Clause License 
