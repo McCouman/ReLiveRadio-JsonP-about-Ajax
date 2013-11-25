@@ -3,7 +3,7 @@
 Plugin Name:  Relive Radio Widget Plugin
 Description:  Ermöglicht das Einbinden des ReliveRadio Miniplayers über die Widgets in die Sidebar
 Plugin URI:   http://labs.wikibyte.org
-Version:      2.2.3alpha
+Version:      2.2.4
 Author:       Michael McCouman jr.
 Author URI:   http://wikibyte.org/
 Props:        Michael McCouman jr.
@@ -24,7 +24,7 @@ Props:        Michael McCouman jr.
 add_action('admin_print_styles-widgets.php', 'relive_widgets_style');
 function relive_widgets_style(){
 
-    echo <<<EOF
+    echo '
 <style type="text/css">
 div#widget-list div.ui-draggable[id*=_relive_radio_widget] .widget-top {
 	border: none !important;
@@ -51,7 +51,12 @@ div.widget[id*=_relive_radio_widget] .widget-top{
     background: #000;
 }
 div.widget[id*=_relive_radio_widget] .widget-control-actions {
-	background: url(/wp-content/plugins/relive-plugin-widget/inc/patter.png) #333 !important;
+	background: url(
+'; 
+?>
+	<?php echo plugins_url('/inc/patter.png', __FILE__ ); ?>
+<?php echo '
+	) #333 !important;
 	padding: 12px;
 	margin-left: -12px;
 	margin-right: -12px;
@@ -59,7 +64,12 @@ div.widget[id*=_relive_radio_widget] .widget-control-actions {
 	border-top: 1px solid #555;
 }
 div.widget[id*=_relive_radio_widget] .widget-inside{
-    background: url(/wp-content/plugins/relive-plugin-widget/inc/bg.png) #000 !important;
+    background: url(
+';
+?>
+	<?php echo plugins_url('/inc/bg', __FILE__ ); ?>
+<?php echo '
+	) #000 !important;
 	border: 2px solid #000;
 }
 div.widget[id*=_relive_radio_widget] .cw-color-picker { 
@@ -74,7 +84,7 @@ div.widget[id*=_relive_radio_widget] .in-widget-title {
 	text-shadow: #222 0 0 0;
 }
 </style>
-EOF;
+';
 }
 
 
@@ -194,13 +204,9 @@ select.ins {
 	width: 100%;
 }
 .init {
-	background: url(/wp-content/plugins/relive-plugin-widget/inc/ini.png) center right #222;
+	background: url(<?php echo plugins_url('/inc/ini.png', __FILE__ ); ?> center right #222 !important;
 	border-color: #008DB9 !important;
 	color: #4EC8E7 !important;
-}
-.copy {
-	text-decoration: none !important;
-	color: #fff;
 }
 #<?php
 
@@ -278,10 +284,6 @@ echo $id[0].'-'.$id[1] . "-" . $id[2].'-savewidget';
   </div>
 */
 ?>
-
-
-
-
 
 <?
 #################### Label Title
@@ -392,16 +394,42 @@ echo $id[0].'-'.$id[1] . "-" . $id[2].'-savewidget';
 			});
 		});
 	//]]>   
-</script>		
+</script>
+<style>
+div#colla {
+	width:100% !important;
+	cursor:pointer !important;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	border-top: none !important;
+	box-shadow: none !important;
+	background-image:  none !important;
+	background: none !important;
+}
+div#wtitle {
+	padding: 0px !important;
+}
+</style>
+<div class="widget" id="colla" >
+	<div class="widget-top">
+		<div class="widget-title" id="wtitle">
+		<h4> <input style="border-color: #008DB9 !important;" class="widefat init" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php if($color) { echo '#'.$color; } else { echo '#'; } ?>" /></h4>
+		</div>
+	</div>
+
+	<div class="widget-inside">	
 	<p>
 	  <label id="tc" for="<?php echo $this->get_field_id('color'); ?>"><b>Eigene Farbe:</b></label> 
-	  <input class="widefat init" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>" type="text" value="<?php if($color) { echo '#'.$color; } else { echo '#'; } ?>" />
-		<center><div class="cw-color-picker" rel="<?php echo $this->get_field_id('color'); ?>"></div></center>
+	 	<center><div class="cw-color-picker" rel="<?php echo $this->get_field_id('color'); ?>"></div></center>
 	</p>
+	</div>
+</div>		
 	
-	<foo>
-	<a class="copy" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><img id="project" style="width: 22px;" src="<?php echo plugins_url('/inc/rr-widget.png', __FILE__ ); ?>" /> <span class="copy">Ein <b>ReliveRadio</b> Projekt</a></a>
-	</foo>
+	
+
+	<a style="text-decoration: none !important;color: #fff !important;" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><img style="text-decoration: none !important;color: #fff !important; width: 22px;" id="project" src="<?php echo plugins_url('/inc/rr-widget.png', __FILE__ ); ?>" /></a><a style="text-decoration: none !important;color: #fff !important;" target="_blank" href="http://dev.wikibyte.org/ReliveRadio/Downloads/Miniplayer"><span style="text-decoration: none !important;color: #fff !important;">Ein <b>ReliveRadio</b> Projekt</a>
+
 <?php 
 	}
 
