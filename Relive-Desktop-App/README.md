@@ -4,7 +4,7 @@ Relive Radio APP
 <h3>NEU! ReliveRadio App für Mac</h3>
 Schnell und einfach das bekannteste Podcast Radio auf dem Desktop hören, mit der neuen Mini App von Relive.
 
-<a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Relive-Desktop-App/ReliveRadio-2.1.13.zip?raw=true">Hier Downloaden</a>
+<a href="https://github.com/McCouman/ReLiveRadio-JsonP-about-Ajax/blob/master/Relive-Desktop-App/ReliveRadio-2.1.14.zip?raw=true">Hier Downloaden</a>
 
 <img src="https://trello-attachments.s3.amazonaws.com/51f5116bbdd671c004000b35/5246e8eb58c494977a001568/3ef4e6c9f92a461fcf47bfeb0e59dae1/Bildschirmfoto_2013-10-04_um_17.02.10.png">
 
@@ -23,7 +23,7 @@ Schnell und einfach das bekannteste Podcast Radio auf dem Desktop hören, mit de
 
 @developer: <a style="color: #08C;" href="https://flattr.com/profile/mccouman">Michael McCouman jr.</a>
 
-@version: 2.2.13
+@version: 2.2.14
 
 Copyright (c) 2013, C3ltaX Media - All rights reserved.
 
